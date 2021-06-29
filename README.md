@@ -61,9 +61,10 @@ A React Web-app, which includes details of all characters, of one of the greates
    - Navigation component added.
    - File hierarchy made effective.
    - Webpage made more responsive and attractive.
-5. Backend commit(Yet to come):
-   - Added scrapping module to scrape details of character from "Wikipedia".
    - Integrated with Firebase to have connections with visitors.
+5. Scrappy commit(Yet to come):
+   - Added scrapping module to scrape details of character from "Wikipedia".
+   
 
 ## Available Scripts
 
