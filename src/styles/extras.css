@@ -1,0 +1,90 @@
+body{
+  background-color: black;
+}
+
+.about {
+  background-color: black;
+  color: white;
+  
+}
+.aboutImage img {
+  all: unset;
+  height: 60px;
+  padding: 10px;
+}
+
+.contact-form {
+  color: white;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.form-text h2{
+  font-size: 25pt;
+  font-weight: 500;
+}
+.form-input {
+  border-radius: 10px;
+  border: none;
+  background-color: #161616;
+  text-align: left;
+  width: 80%;
+  margin-bottom: 1rem;
+  padding: 0.8em;
+  color:white;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-form {
+    width:100%;
+  }
+  .form-input{
+    font-size: 0.8em;
+  }
+}
+
+.form-input::placeholder{
+  color:white;
+}
+.form-input:focus{
+  background-color: white;
+  color:black;
+  outline:none;
+}
+.btn {
+  background-color: #fa788d;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.btn:focus {
+  border: none;
+  background-color: #54dcf2;
+  outline: none;
+}
+.btn:hover {
+  border: none;
+  background-color: #54dcf2;
+}
+
+.star{
+  cursor: pointer;
+}
+.star_container{
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+div.contact-form p{
+  text-align: initial;
+  width: fit-content;
+  padding: 0;
+  margin: 0 auto;
+}

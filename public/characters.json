@@ -1,0 +1,317 @@
+{
+  "list": [
+    {
+      "name": "Shantanu",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Ganga",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Satyavati",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Son"
+        },
+        {
+          "name": "Chitrangada",
+          "relation": "Son"
+        },
+        {
+          "name": "Vichitraveerya",
+          "relation": "Son"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Satyavati",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Shantanu",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Dashraj",
+          "relation": "Father"
+        },
+        {
+          "name": "Chitrangada",
+          "relation": "Son"
+        },
+        {
+          "name": "Vichitraveerya",
+          "relation": "Son"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Ganga",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Shantanu",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Himavan",
+          "relation": "Father"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Son"
+        }
+      ],
+      "view": true
+    },
+
+    {
+      "name": "Dhritarashtra",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Ved Vyas",
+          "relation": "Father"
+        },
+        {
+          "name": "Ambika",
+          "relation": "Mother"
+        },
+        {
+          "name": "Gandhaari",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Kauravas",
+          "relation": "Son"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "PanduRaj",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Ved Vyas",
+          "relation": "Father"
+        },
+        {
+          "name": "Ambalika",
+          "relation": "Mother"
+        },
+        {
+          "name": "Kunti, Madri",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Pandavas",
+          "relation": "Son"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Vidura",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Ved Vyas",
+          "relation": "Father"
+        },
+        {
+          "name": "Parishrami",
+          "relation": "Mother"
+        },
+        {
+          "name": "Sulabha",
+          "relation": "Spouse"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Yudhishthir",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "PanduRaj",
+          "relation": "Father"
+        },
+        {
+          "name": "Kunthi",
+          "relation": "Mother"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Grand father"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Bheem",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "PanduRaj",
+          "relation": "Father"
+        },
+        {
+          "name": "Kunthi",
+          "relation": "Mother"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Grand father"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Arjun",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "PanduRaj",
+          "relation": "Father"
+        },
+        {
+          "name": "Kunthi",
+          "relation": "Mother"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Grand father"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Nakul",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "PanduRaj",
+          "relation": "Father"
+        },
+        {
+          "name": "Kunthi",
+          "relation": "Mother"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Grand father"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Sahadev",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "PanduRaj",
+          "relation": "Father"
+        },
+        {
+          "name": "Kunthi",
+          "relation": "Mother"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Grand father"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Dhuryodhana",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Bheeshma",
+          "relation": "Grand father"
+        },
+        {
+          "name": "Dhritarashtra",
+          "relation": "Father"
+        },
+        {
+          "name": "Gandhaari",
+          "relation": "Mother"
+        },
+        {
+          "name": "Sakuni",
+          "relation": "Uncle"
+        },
+        {
+          "name": "Bhagamathi",
+          "relation": "Spouse"
+        }
+      ],
+      "view": true
+    },
+    {
+      "name": "Kunthi",
+      "img": "./images/download.jpg",
+      "relations": [],
+      "view": true
+    },
+    {
+      "name": "Draupadi",
+      "img": "./images/download.jpg",
+      "relations": [],
+      "view": true
+    },
+    {
+      "name": "Bheeshma",
+      "img": "./images/download.jpg",
+      "relations": [],
+      "view": true
+    },
+    {
+      "name": "Chitrangada",
+      "img": "./images/download.jpg",
+      "relations": [],
+      "view": true
+    },
+    {
+      "name": "Vichitraveerya",
+      "img": "./images/download.jpg",
+      "relations": [],
+      "view": true
+    },
+    {
+      "name": "Draupadi",
+      "img": "./images/download.jpg",
+      "relations": [],
+      "view": true
+    }
+  ]
+}
