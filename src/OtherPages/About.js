@@ -11,13 +11,13 @@ const About = () => {
         <img src="./aboutImages/css.png" alt="Waiting" />
         <img src="./aboutImages/javascript.png" alt="Waiting" />
         <h2>Contribute here</h2>
-        <a href="https://github.com/Abhiramborige">
+        <a href="https://github.com/Abhiramborige/react-app-mahabharath">
           <img src="./aboutImages/github.png" alt="Waiting" />
         </a>
-        <h2>Check out this video !😃</h2>
+        {/* <h2>Check out this video !😃</h2>
         <a href="https://youtube.com">
           <img src="./aboutImages/youtube.png" alt="Waiting" />
-        </a>
+        </a> */}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MainApp from "./MainApp";
 import About from "./OtherPages/About";
 import Interact from "./OtherPages/Connect";
@@ -11,10 +11,10 @@ const App = () => {
       <Route exact path="/">
         <MainApp></MainApp>
       </Route>
-      <Route path="./connect">
+      <Route path="/connect">
         <Interact></Interact>
       </Route>
-      <Route path="./about">
+      <Route path="/about">
         <About></About>
       </Route>
     </Switch>
@@ -23,9 +23,9 @@ const App = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter >
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
