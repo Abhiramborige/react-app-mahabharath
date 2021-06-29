@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import MainApp from './MainApp';
 import About from './OtherPages/About';
 import Interact from './OtherPages/Connect';
 
 const App = () => {
   return ( 
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Route exact path="/">
           <MainApp></MainApp>
@@ -19,7 +19,7 @@ const App = () => {
           <About></About>
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
    );
 }
 
