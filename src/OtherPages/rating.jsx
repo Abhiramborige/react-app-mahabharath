@@ -15,12 +15,12 @@ class Rating extends Component {
       
       // to have hover effects
       star.addEventListener("mouseover", () => {
-        for (var i = 0; i <= index; i++) {
+        for (let i = 0; i <= index; i++) {
           star_array[i].textContent = "star";
           star_array[i].style.color = "gold";
         }
         // the other indexed stars must become normal.
-        for (var i = index + 1; i < 5; i++) {
+        for (let i = index + 1; i < 5; i++) {
           star_array[i].textContent = "star_outline";
           star_array[i].style.color = "unset";
         }
@@ -29,7 +29,7 @@ class Rating extends Component {
       // must retain the current state values when leaving the star div.
       star.addEventListener("mouseleave", () => {
 
-        for (var i = 0; i < star_array.length; i++) {
+        for (let i = 0; i < star_array.length; i++) {
           let star = star_array[i];
           if (this.state.value[i] === 1) {
             star.style.color = "gold";
@@ -44,10 +44,10 @@ class Rating extends Component {
       // must update the state when clicked.
       star.addEventListener("click", () => {
         let temp = this.state.value;
-        for (var i = 0; i <= index; i++) {
+        for (let i = 0; i <= index; i++) {
           temp[i] = 1;
         }
-        for (var i = index + 1; i < 5; i++) {
+        for (let i = index + 1; i < 5; i++) {
           temp[i] = 0;
         }
 
