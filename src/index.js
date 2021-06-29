@@ -11,10 +11,10 @@ const App = () => {
       <Route exact path="/">
         <MainApp></MainApp>
       </Route>
-      <Route path="/connect">
+      <Route path="./connect">
         <Interact></Interact>
       </Route>
-      <Route path="/about">
+      <Route path="./about">
         <About></About>
       </Route>
     </Switch>
