@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { Fragment, Component, Suspense } from "react";
 import Search from "./Components/search";
-import ClickedImage from "./clickedImage";
 import ToggleButton from "./Components/themeChanger";
 import CharacterList from "./characterList";
 import Navbar from "./Components/navbar";
-import './styles/index.css';
+import "./styles/index.css";
+import Loader from "./Components/loader";
+
+const ClickedImage = React.lazy(() => import("./clickedImage"));
 
 class MainApp extends Component {
   constructor(props) {
@@ -56,17 +58,6 @@ class MainApp extends Component {
     }));
   };
 
-  /* This component gets updated by the click on any image. 
-    It checks the state of mainApp view and modifies the styling of image displayed and p tags displayed.*/
-  componentDidUpdate() {
-    let img = document.querySelector("img");
-    let p = document.querySelector("p");
-    if (this.state.MainApp_view === false) {
-      img.classList.add("selected-image");
-      p.classList.add("style-p");
-    }
-  }
-
   handleClick = (e) => {
     this.setState((state) => ({
       MainApp_view: !this.state.MainApp_view,
@@ -80,11 +71,12 @@ class MainApp extends Component {
     let root = document.querySelector("#root");
     console.log("MainApp View: " + this.state.MainApp_view);
     return (
-      <React.Fragment>
+      <Fragment>
+        <ToggleButton></ToggleButton>
         {this.state.MainApp_view === true
           ? (root.classList.remove("style-root"),
             (
-              <React.Fragment>
+              <Fragment>
                 <Navbar></Navbar>
                 <h1>Mahabharath</h1>
                 <Search
@@ -95,18 +87,19 @@ class MainApp extends Component {
                   list={this.state.list}
                   onClick={this.handleClick}
                 ></CharacterList>
-              </React.Fragment>
+              </Fragment>
             ))
           : (root.classList.add("style-root"),
             (
-              <ClickedImage
-                onClick={this.handleClick}
-                character_details={this.state.clicked_details}
-                all_details={this.state.list}
-              ></ClickedImage>
+              <Suspense fallback={<Loader></Loader>}>
+                <ClickedImage
+                  onClick={this.handleClick}
+                  character_details={this.state.clicked_details}
+                  all_details={this.state.list}
+                ></ClickedImage>
+              </Suspense>
             ))}
-        <ToggleButton></ToggleButton>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

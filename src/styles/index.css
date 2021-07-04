@@ -35,21 +35,9 @@ form {
   margin-right: 1%;
 }
 
-.close-button {
+.close-button, .theme-toggle {
   position: absolute;
   top: 4rem;
-  right: 1rem;
-  display: flex;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 4rem;
-  left: 1rem;
   cursor: pointer;
   border-radius: 10px;
   background: transparent;
@@ -57,29 +45,18 @@ form {
   z-index: 1;
 }
 
+.theme-toggle {
+  left: 1rem;
+}
+
+.close-button{
+  right: 1rem;
+}
+
 .style-root {
   display: grid;
   justify-items: center;
   align-items: flex-start;
-}
-
-.close-button span {
-  position: absolute;
-  height: 3px;
-  width: 100%;
-}
-
-.close-button span:nth-child(1) {
-  transform: translateY(15px) rotateZ(45deg);
-}
-.close-button span:nth-child(2) {
-  transform: translateY(15px) rotateZ(-45deg);
-}
-
-.close-button:hover {
-  border-radius: 10px;
-  transition-duration: 0.3s;
-  box-shadow: 5px 5px 10px orange;
 }
 
 .clicked-image{

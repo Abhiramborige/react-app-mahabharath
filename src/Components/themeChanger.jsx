@@ -1,53 +1,54 @@
 import { Component } from "react";
 
+export let theme;
 class ToggleButton extends Component {
-  state = { button: "true" };
-  handleToggle = (e) => {
-    this.setState((state) => ({
-      button: !this.state.button,
-    }));
-  };
+  state={
+    theme:true,
+  }
 
-  // whenever the value of the button is updated, component is updated, so theme is applied
+  componentDidMount(){
+    console.log("Themechanger component mounted");
+  }
+  
   componentDidUpdate() {
-    // the cross mark
-    let crossLines = document.querySelector(".close-button");
-    if (crossLines != null) {
-      crossLines = crossLines.querySelectorAll("span");
-      for (var i = 0; i < crossLines.length; i++) {
-        crossLines[i].style.backgroundColor = this.state.button
-          ? "white"
-          : "black";
-      }
-    }
-    // the background
-    document.querySelector("body").style.backgroundColor = this.state.button
+    console.log("Themechanger component updated");
+
+    theme = this.state.theme;
+    document.querySelector("body").style.backgroundColor = theme
       ? "black"
       : "white";
-    // change the style in * selector
-    document.querySelector("*").style.color = this.state.button
+    document.querySelector("*").style.color = theme
       ? "white"
       : "black";
-    document.querySelector("*").style.fontWeight = this.state.button
+    document.querySelector("*").style.fontWeight = theme
       ? "normal"
       : "bolder";
-    // the image
+
     let images = document.querySelectorAll("img");
     for (let i = 0; i < images.length; i++) {
-      images[i].style.border = this.state.button
+      images[i].style.border = theme
         ? "2px solid white"
         : "2px solid black";
     }
-    // icon color
-    let icon = document.querySelector(".material-icons");
-    icon.style.color = this.state.button ? "white" : "black";
+
+    // icons color
+    let icon = document.querySelectorAll(".material-icons");
+    icon.forEach((icon_element)=>{
+      icon_element.style.color = theme ? "white" : "black";
+    })
   }
+
+  handleThemeChange = () => {
+    this.setState((state) => ({
+      theme: !this.state.theme,
+    }));
+  };
 
   render() {
     return (
-      <button onClick={this.handleToggle} className="theme-toggle">
+      <button onClick={this.handleThemeChange} className="theme-toggle">
         <span className="material-icons">
-          {this.state.button ? "dark_mode" : "light_mode"}
+          {this.state.theme ? "dark_mode" : "light_mode"}
         </span>
       </button>
     );

@@ -24,7 +24,7 @@ class Character extends Component {
   /* This lifecycle method will call the handleHover, which adds the extra details about the 
       Clicked_Image after component gets mounted on if handle props is true */
   componentDidMount() {
-    console.log("Mounted");
+    console.log("Character component Mounted");
     return this.props.handle ? this.handleHover.call() : null;
   }
 
@@ -38,7 +38,13 @@ class Character extends Component {
           onMouseOver={this.props.handle ? null : this.handleHover}
           onMouseLeave={this.props.handle ? null : this.handleLeave}
           onClick={this.props.onClick}
+          /* https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code */
+          /* Adjustment for accessebility through keyboard */
+          onKeyDown={(e) => (
+            (e.code === "Enter") ? this.props.onClick() : null
+          )}
           alt="Waiting"
+          tabIndex={(this.props.tabIndex==="-1")?"-1":"0"}
         />
         <p id={this.props.name}>{this.props.name}</p>
       </div>

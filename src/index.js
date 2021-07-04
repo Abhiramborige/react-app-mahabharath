@@ -1,29 +1,33 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import MainApp from "./MainApp";
-import About from "./OtherPages/About";
-import Interact from "./OtherPages/Connect";
+import Loader from "./Components/loader";
+
+const MainApp = lazy(() => import("./MainApp"));
+const About = lazy(() => import("./OtherPages/About"));
+const Interact = lazy(() => import("./OtherPages/Connect"));
 
 const App = () => {
   return (
-    <Switch>
-      <Route exact path="/">
-        <MainApp></MainApp>
-      </Route>
-      <Route path="/connect">
-        <Interact></Interact>
-      </Route>
-      <Route path="/about">
-        <About></About>
-      </Route>
-    </Switch>
+    <Suspense fallback={<Loader></Loader>}>
+      <Switch>
+        <Route exact path="/">
+          <MainApp></MainApp>
+        </Route>
+        <Route path="/connect">
+          <Interact></Interact>
+        </Route>
+        <Route path="/about">
+          <About></About>
+        </Route>
+      </Switch>
+    </Suspense>
   );
 };
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter >
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,

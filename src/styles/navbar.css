@@ -38,6 +38,9 @@ a{
   justify-content: space-between;
   width: 30px;
   height: 20px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
 }
 .toggle-button .bar {
   height: 3px;
@@ -67,7 +70,23 @@ a{
   .navbar-links li a {
     padding: 0.5rem 1rem;
   }
-  .navbar-links.active {
+  .navbar-links.active, .navbar-links:focus {
     display: flex;
   }
+}
+
+/*  */
+ul li a.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+ul li a.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }

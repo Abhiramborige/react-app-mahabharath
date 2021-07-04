@@ -1,15 +1,25 @@
-/* We can pass props in the stateless functional component 
-  to get the function from the parent component */
-const CloseButton = (props) => {
-  return (
-    <div
-      className="close-button"
-      onClick={() => props.onClick({ name: "Cross" })}
-    >
-      <span></span>
-      <span></span>
-    </div>
-  );
-};
+import { Component } from "react";
+import { theme } from "./themeChanger";
+
+class CloseButton extends Component {
+
+  // used to apply the stylings when first mounted using theme variable.
+  componentDidMount() {
+    console.log("Cancel button mounted")
+    let crossLine = document.querySelector(".close-button");
+    crossLine.style.color = theme ? "white" : "black";
+  }
+
+  render() {
+    return (
+      <button
+        onClick={() => this.props.onClick({ name: "Cross" })}
+        className="close-button"
+      >
+        <span className="material-icons">clear</span>
+      </button>
+    );
+  }
+}
 
 export default CloseButton;

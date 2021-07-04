@@ -5,14 +5,15 @@ import Character from "./Components/character";
 class CharacterList extends Component {
   render() {
     return (
-      <div className="container">
-        {this.props.list.map((character) =>
+      <div className="container" id="maincontent">
+        {this.props.list.map((character, index) =>
           character.view ? (
             <Character
               img={character.img}
               name={character.name}
               rel={character.relations}
               onClick={() => this.props.onClick({ ...character })}
+              key={index}
             ></Character>
           ) : null
         )}

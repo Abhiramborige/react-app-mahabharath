@@ -40,31 +40,6 @@ A React Web-app, which includes details of all characters, of one of the greates
 #### Add any other functionalities by creating new file.
 #### Add photos in "public\images"
 
-### Commit Description:
-
-1. Basic idea implemented:
-   - Character render from json.
-   - Search funtionality for rendered characters.
-   - Responsive layout.
-   - Few characters added.
-   - Hover effect on character components.
-2. Modified UI:
-   - Click on character makes new Component to render and old to unmount.
-   - Cancel component to just make it reverse.
-3. Theme Added:
-   - Switch theme option made available
-4. Many changes made (Huge commit!):
-   - Google material icons used for better UI.
-   - Added "About" and "Connect" pages.
-   - A Slider at the bottom of clicked Character to get the relatives of the character.
-   - Added click effects on slider elements to show the details about them.
-   - Navigation component added.
-   - File hierarchy made effective.
-   - Webpage made more responsive and attractive.
-   - Integrated with Firebase to have connections with visitors.
-5. Scrappy commit(Yet to come):
-   - Added scrapping module to scrape details of character from "Wikipedia".
-   
 
 ## Available Scripts
 

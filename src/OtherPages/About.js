@@ -1,3 +1,5 @@
+import "../styles/extras.css";
+
 const About = () => {
   return (
     <div className="about">
