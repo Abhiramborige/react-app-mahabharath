@@ -8,7 +8,7 @@ A React Web-app, which includes details of all characters, of one of the greates
 
 ## Contribute:
 
-#### Add character [here](public\characters.json)
+#### Add character [here](public/characters.json)
 
 ```json
 {
@@ -28,7 +28,7 @@ A React Web-app, which includes details of all characters, of one of the greates
 }
 ```
 
-#### Add description about the character [here](public\characters_details.json)
+#### Add description about the character [here](public/character_details.json)
 
 ```json
 {
@@ -37,7 +37,7 @@ A React Web-app, which includes details of all characters, of one of the greates
 }
 ```
 
-#### Must append the required filter [here](public\filter.json) (A MUST)
+#### Must append the required filter [here](public/filter.json) (A MUST)
 
 ```json
 {
