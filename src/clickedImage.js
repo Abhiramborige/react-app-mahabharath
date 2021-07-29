@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy } from "react";
 import CloseButton from "./Components/cancel";
 import Character from "./Components/character";
-import Slider from "./slider";
-
+import Loading from "./Components/loader";
 import { theme } from "./Components/themeChanger";
+import Information from "./Information";
+
+const Slider=lazy(() => import("./slider"))
 
 /* This is not a component but just a rendered to render list of components */
 class ClickedImage extends Component {
@@ -37,6 +39,11 @@ class ClickedImage extends Component {
     p.classList.remove("style-p");
   }
 
+  handleImage = (data) => {
+    this.setState({ img_link: data });
+    console.log("Picture updated in clicked image");
+  };
+
   render() {
     /* Props destructuring here */
     const { img, name, relations } = this.props.character_details;
@@ -48,15 +55,19 @@ class ClickedImage extends Component {
         ></CloseButton>
         <div className="clicked-image">
           <Character
-            img={img}
+            img={this.state.img_link || img}
             name={name}
             rel={relations}
             handle={this.state.handle}
             /* Adjustment for accessebility through keyboard */
             tabIndex="-1"
-          ></Character>
+          >
+            <Information name={name} handleImage={this.handleImage}></Information>
+          </Character>
         </div>
-        <Slider rel={relations} all={this.props.all_details}></Slider>
+        <Suspense fallback={<Loading></Loading>}>
+          <Slider rel={relations} all={this.props.all_details}></Slider>
+        </Suspense>
       </React.Fragment>
     );
   }

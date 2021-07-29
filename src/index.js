@@ -9,7 +9,13 @@ const Interact = lazy(() => import("./OtherPages/Connect"));
 
 const App = () => {
   return (
-    <Suspense fallback={<Loader></Loader>}>
+    <Suspense
+      fallback={
+        <div className="loader-container">
+          <Loader></Loader>
+        </div>
+      }
+    >
       <Switch>
         <Route exact path="/">
           <MainApp></MainApp>

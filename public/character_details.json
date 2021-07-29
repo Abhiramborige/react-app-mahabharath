@@ -1,16 +1,44 @@
 {
   "list": [
     {
-      "name": "Arjun",
-      "description": "One of the main characters in the story."
+      "name": "Arjuna",
+      "description": "One of the main characters in the story. Drona's favourite student."
     },
     {
-      "name": "Bheem",
-      "description": "One of the main characters in the story."
+      "name": "Bhima",
+      "description": "One of the main characters in the story. The strongest of all"
     },
     {
       "name": "Draupadi",
       "description": "One of the main characters in the story. Wife of Pandavas"
+    },
+    {
+      "name": "Kunti",
+      "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Pandu",
+      "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Yudhishthira",
+      "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Satyavati",
+      "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Duryodhana",
+      "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Vidura",
+      "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Nakula",
+      "description": "One of the main characters in the story."
     }
   ]
 }

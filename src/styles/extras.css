@@ -101,7 +101,11 @@ div.contact-form p{
   border-top: 10px solid yellow;
   width: 40px;
   height: 40px;
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
+  margin: auto 0;
+}
+
+.loader-container{
   /* to make it center: https://stackoverflow.com/questions/6256043/css-position-loading-indicator-in-the-center-of-the-screen */
   position: fixed;
   margin: auto;
@@ -109,6 +113,8 @@ div.contact-form p{
   left: 0;
   bottom: 0;
   right: 0;
+  width: fit-content;
+  height: fit-content;
 }
 
 @keyframes spin {

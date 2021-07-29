@@ -13,8 +13,8 @@ class Interact extends Component {
     };
   }
 
-  chage_rate = (num) => {
-    this.setState ({
+  change_rate = (num) => {
+    this.setState({
       rating: num,
     });
   };
@@ -33,8 +33,8 @@ class Interact extends Component {
     }));
   };
 
-  componentDidUpdate(){
-    console.log("Rating: "+this.state.rating)
+  componentDidUpdate() {
+    console.log("Rating: " + this.state.rating);
   }
 
   render() {
@@ -65,7 +65,7 @@ class Interact extends Component {
             required
           ></textarea>
 
-          <Rating rate_func={this.chage_rate} rate={this.state.rating}></Rating>
+          <Rating rate_func={this.change_rate}></Rating>
           <br></br>
           <input type="submit" className="btn" value="Send"></input>
         </div>

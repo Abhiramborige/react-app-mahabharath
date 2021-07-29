@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, Fragment } from "react";
 
 class Character extends Component {
   handleHover = (e) => {
@@ -30,24 +30,27 @@ class Character extends Component {
 
   render() {
     return (
-      <div>
-        <img
-          src={this.props.img}
-          /* onMouseOver, onMouseLeave functions get theor values as the function 
+      <Fragment>
+        <div>
+          <img
+            src={this.props.img}
+            /* onMouseOver, onMouseLeave functions get theor values as the function 
               if the handle props is false, else they become null */
-          onMouseOver={this.props.handle ? null : this.handleHover}
-          onMouseLeave={this.props.handle ? null : this.handleLeave}
-          onClick={this.props.onClick}
-          /* https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code */
-          /* Adjustment for accessebility through keyboard */
-          onKeyDown={(e) => (
-            (e.code === "Enter") ? this.props.onClick() : null
-          )}
-          alt="Waiting"
-          tabIndex={(this.props.tabIndex==="-1")?"-1":"0"}
-        />
-        <p id={this.props.name}>{this.props.name}</p>
-      </div>
+            onMouseOver={this.props.handle ? null : this.handleHover}
+            onMouseLeave={this.props.handle ? null : this.handleLeave}
+            onClick={this.props.onClick}
+            /* https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code */
+            /* Adjustment for accessebility through keyboard */
+            onKeyDown={(e) =>
+              e.code === "Enter" ? this.props.onClick() : null
+            }
+            alt="Waiting"
+            tabIndex={this.props.tabIndex === "-1" ? "-1" : "0"}
+          />
+          <p id={this.props.name}>{this.props.name}</p>
+        </div>
+        {this.props.children}
+      </Fragment>
     );
   }
 }

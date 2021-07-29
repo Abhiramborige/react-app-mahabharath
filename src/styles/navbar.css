@@ -22,7 +22,7 @@
   padding: 1rem;
   display: block;
 }
-a{
+.navbar a{
   text-decoration: none;
   color: white;
 }

@@ -1,11 +1,9 @@
-import { Component } from "react";
+import { Component, Fragment } from "react";
 
-class Information extends Component {
+class OfflineInformation extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      list: [],
-    };
+    this.state = { list: [] };
   }
 
   componentDidMount() {
@@ -18,20 +16,22 @@ class Information extends Component {
     })
       .then((res) => res.json())
       .then(({ list }) => this.setState({ list }));
-    console.log(this.state.list);
   }
 
   render() {
-    console.log(this.props.name);
     return (
-      <div className="information">
+      <div className="flex-info-element">
         <h2>About {this.props.name}</h2>
-        {this.state.list.map((element) =>
-          element.name === this.props.name ? <p>{element.description}</p> : null
+        {this.state.list.map((element, index) =>
+          element.name === this.props.name ? (
+            <Fragment key={index}>
+              <p>{element.description}</p>
+            </Fragment>
+          ) : null
         )}
       </div>
     );
   }
 }
 
-export default Information;
+export default OfflineInformation;

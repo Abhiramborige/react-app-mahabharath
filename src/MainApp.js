@@ -1,12 +1,13 @@
 import React, { Fragment, Component, Suspense } from "react";
 import Search from "./Components/search";
 import ToggleButton from "./Components/themeChanger";
-import CharacterList from "./characterList";
 import Navbar from "./Components/navbar";
 import "./styles/index.css";
 import Loader from "./Components/loader";
+import { randomize_list } from "./randomizer";
 
 const ClickedImage = React.lazy(() => import("./clickedImage"));
+const CharacterList = React.lazy(() => import("./characterList"));
 
 class MainApp extends Component {
   constructor(props) {
@@ -32,21 +33,6 @@ class MainApp extends Component {
       .then(({ list }) => this.setState({ list }));
   }
 
-  /* function to randomize the list in the json, 
-    to show the list in a different order, whenever loaded.
-    1. https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
-    2. https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array */
-  randomize_list = (e) => {
-    let i = 0;
-    let list = this.state.list;
-    list.reverse().forEach((character) => {
-      let random = Math.floor(Math.random() * (i + 1));
-      let temp = list[i];
-      list[i] = list[random];
-      list[random] = temp;
-      i++;
-    });
-  };
 
   /* this handle function sets the state of the current list after changes made by onChange event call
     Reference: 
@@ -67,7 +53,8 @@ class MainApp extends Component {
   };
 
   render() {
-    this.randomize_list.call();
+    // randommize the list
+    randomize_list(this.state.list);
     let root = document.querySelector("#root");
     console.log("MainApp View: " + this.state.MainApp_view);
     return (
@@ -83,15 +70,29 @@ class MainApp extends Component {
                   list={this.state.list}
                   onChange={this.handleChangeInState}
                 ></Search>
-                <CharacterList
-                  list={this.state.list}
-                  onClick={this.handleClick}
-                ></CharacterList>
+                <Suspense
+                  fallback={
+                    <div className="loader-container">
+                      <Loader></Loader>
+                    </div>
+                  }
+                >
+                  <CharacterList
+                    list={this.state.list}
+                    onClick={this.handleClick}
+                  ></CharacterList>
+                </Suspense>
               </Fragment>
             ))
           : (root.classList.add("style-root"),
             (
-              <Suspense fallback={<Loader></Loader>}>
+              <Suspense
+                fallback={
+                  <div className="loader-container">
+                    <Loader></Loader>
+                  </div>
+                }
+              >
                 <ClickedImage
                   onClick={this.handleClick}
                   character_details={this.state.clicked_details}

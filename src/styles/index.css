@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   text-align: center;
 }
@@ -22,6 +26,12 @@ input {
   outline: none;
 }
 
+/* adjustment here, as anchor tags are attached for keyboard navigation. */
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 form {
   padding-top: 10px;
   padding-bottom: 20px;
@@ -35,7 +45,8 @@ form {
   margin-right: 1%;
 }
 
-.close-button, .theme-toggle {
+.close-button,
+.theme-toggle {
   position: absolute;
   top: 4rem;
   cursor: pointer;
@@ -46,10 +57,10 @@ form {
 }
 
 .theme-toggle {
-  left: 1rem;
+  left: 0.8rem;
 }
 
-.close-button{
+.close-button {
   right: 1rem;
 }
 
@@ -59,17 +70,17 @@ form {
   align-items: flex-start;
 }
 
-.clicked-image{
+.clicked-image {
   position: relative;
-  top:10vh;
-  width: 80%;
+  top: 10vh;
+  width: 90%;
 }
 
-div.clicked-image > div{
+div.clicked-image > div,
+.flex-info {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   justify-content: space-evenly;
 }
 
@@ -78,7 +89,7 @@ div.clicked-image > div{
   border: 2px solid white;
   height: 10em;
   width: 10em;
-} 
+}
 
 .style-p {
   font-size: x-large;
@@ -88,7 +99,7 @@ div.clicked-image > div{
   font-size: 30px;
 }
 
-div.slider{
+div.slider {
   border: 2px solid orange;
   width: 80vw;
   overflow-x: auto;
@@ -102,22 +113,39 @@ ul.slider_list {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  list-style: none; 
+  list-style: none;
   width: fit-content;
-  
+  scroll-snap-type: x mandatory;
 }
-li div.slider_list_element{
+
+ul.slider_list >li{
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+li div.slider_list_element {
   /* top right bottom left */
   padding: 20px 10px 0 10px;
   cursor: pointer;
 }
-li div.slider_list_element:hover{
+li div.slider_list_element:hover {
   transform: scale(1.2);
   transition-duration: 0.3s;
 }
 
-div.information{
+div.information {
   position: relative;
   top: 14vh;
-  font-size: 1.1rem;
+  width: 90%;
+}
+
+.flex-info > div.flex-info-element:nth-child(3) {
+  width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+  .flex-info > div.flex-info-element:nth-child(1),
+  .flex-info > div.flex-info-element:nth-child(2) {
+    max-width: 50%;
+  }
 }

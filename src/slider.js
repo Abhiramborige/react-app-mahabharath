@@ -1,31 +1,36 @@
 import Character from "./Components/character";
-import Information from "./Components/information";
-const { Component, Fragment } = require("react");
+import { Component, Fragment } from "react";
+import Information from "./Information";
+import { randomize_list } from "./randomizer";
 
 class Slider extends Component {
   constructor(props) {
     super(props);
+    this.list = this.props.all;
     this.state = {
-      list: this.props.all,
-      // for slider component to show all inner elements in the list.
-      windowWidth: window.innerWidth,
       // store the clicked image in the slider and pass the information to Information component
-      clicked: "",
+      clicked: null,
+      image_array: this.get_images(),
     };
   }
+
   get_images() {
+    // randommize the props.rel array
+    randomize_list(this.props.rel);
+
     /* search for the people who are related to the current character 
     that is search for all names in relations array */
-    const list_relations = [];
     let image_array = [];
     this.props.rel.forEach((element) => {
-      list_relations.push(element.name);
-      image_array.push(null);
+      image_array.push({name:null, img_link:null});
     });
-    for (var i = 0; i < list_relations.length; i++) {
-      for (var j = 0; j < this.state.list.length; j++) {
-        if (list_relations[i] === this.state.list[j].name) {
-          image_array[i] = this.state.list[j].img;
+    for (var i = 0; i < this.props.rel.length; i++) {
+      for (var j = 0; j < this.list.length; j++) {
+        if (this.props.rel[i].name === this.list[j].name) {
+          image_array[i] = {
+            name: this.list[j].name,
+            img_link: this.list[j].img,
+          };
         }
       }
     }
@@ -47,45 +52,92 @@ class Slider extends Component {
       d.style.removeProperty("display");
       d.style.removeProperty("justify-content");
     }
-    console.log("Updated slider");
   };
+
   componentDidMount() {
+    console.log("Slider Mounted");
+    // calling at first to set initially before attaching listener.
+    this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions);
+
+    // adjusting view while focussing through tabbing.
+    document.querySelectorAll("a").forEach((img, index) => {
+      img.addEventListener("focus", () => {
+        img.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "center",
+        });
+      });
+    });
   }
+
+  componentDidUpdate(prevprops, prevstate) {
+    if (prevstate.clicked !== this.state.clicked) console.log("Slider updated");
+  }
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions);
   }
 
-  handleClick = (e) => {
-    console.log("slider image clicked "+e);
+  handleClick = (e, i) => {
+    console.log("slider image clicked " + e.name);
     this.setState((state) => ({
-      clicked : e
+      clicked: e.name,
+      ele_index: i,
     }));
+  };
+
+  handleImage = (data) => {
+    let temp_arr = this.state.image_array;
+    /* for (let i = 0; i < temp_arr.length; i++) {
+      if (temp_arr[i].name === this.state.clicked) { 
+        temp_arr[i].img_link = data */
+        temp_arr[this.state.ele_index].img_link = data;
+      /* } else {
+        temp_arr[i].img_link = this.state.image_array[i].img_link;
+      }
+    } */
+    this.setState({ image_array: temp_arr });
+    console.log("Picture updated in slider");
   };
 
   render() {
     console.log("Slider rendered");
-    const image_array = this.get_images();
     return (
       <Fragment>
         <div className="slider">
           <ul className="slider_list">
             {this.props.rel.map((element, index) => (
-              <li>
-                <div className="slider_list_element">
-                  <Character
-                    img={image_array[index]}
-                    name={element.name}
-                    // passing an empty
-                    rel={[]}
-                    onClick={()=>this.handleClick(element.name)}
-                  ></Character>
-                </div>
-              </li>
+              <Fragment key={index}>
+                <li>
+                  <div className="slider_list_element">
+                    <a
+                      href="#info"
+                      onClick={() => this.handleClick(element, index)}
+                    >
+                      <Character
+                        img={this.state.image_array[index].img_link}
+                        name={element.name}
+                        // passing an empty
+                        rel={[]}
+                        tabIndex="-1"
+                      ></Character>
+                    </a>
+                  </div>
+                </li>
+              </Fragment>
             ))}
           </ul>
         </div>
-        <Information name={this.state.clicked}></Information>
+        {this.state.clicked !== null ? (
+          <div className="information" id="info">
+            <Information
+              name={this.state.clicked}
+              handleImage={this.handleImage}
+            ></Information>
+          </div>
+        ) : null}
       </Fragment>
     );
   }

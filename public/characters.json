@@ -21,7 +21,7 @@
           "relation": "Son"
         },
         {
-          "name": "Vichitraveerya",
+          "name": "Vichitravirya",
           "relation": "Son"
         }
       ],
@@ -44,7 +44,7 @@
           "relation": "Son"
         },
         {
-          "name": "Vichitraveerya",
+          "name": "Vichitravirya",
           "relation": "Son"
         }
       ],
@@ -136,7 +136,7 @@
       "view": true
     },
     {
-      "name": "Yudhishthir",
+      "name": "Yudhishthira",
       "img": "./images/download.jpg",
       "relations": [
         {
@@ -144,7 +144,7 @@
           "relation": "Father"
         },
         {
-          "name": "Kunthi",
+          "name": "Kunti",
           "relation": "Mother"
         },
         {
@@ -159,7 +159,7 @@
       "view": true
     },
     {
-      "name": "Bheem",
+      "name": "Bhima",
       "img": "./images/download.jpg",
       "relations": [
         {
@@ -167,7 +167,7 @@
           "relation": "Father"
         },
         {
-          "name": "Kunthi",
+          "name": "Kunti",
           "relation": "Mother"
         },
         {
@@ -190,7 +190,7 @@
           "relation": "Father"
         },
         {
-          "name": "Kunthi",
+          "name": "Kunti",
           "relation": "Mother"
         },
         {
@@ -205,7 +205,7 @@
       "view": true
     },
     {
-      "name": "Nakul",
+      "name": "Nakula",
       "img": "./images/download.jpg",
       "relations": [
         {
@@ -213,7 +213,7 @@
           "relation": "Father"
         },
         {
-          "name": "Kunthi",
+          "name": "Kunti",
           "relation": "Mother"
         },
         {
@@ -228,7 +228,7 @@
       "view": true
     },
     {
-      "name": "Sahadev",
+      "name": "Sahadeva",
       "img": "./images/download.jpg",
       "relations": [
         {
@@ -236,7 +236,7 @@
           "relation": "Father"
         },
         {
-          "name": "Kunthi",
+          "name": "Kunti",
           "relation": "Mother"
         },
         {
@@ -251,7 +251,7 @@
       "view": true
     },
     {
-      "name": "Dhuryodhana",
+      "name": "Duryodhana",
       "img": "./images/download.jpg",
       "relations": [
         {
@@ -267,7 +267,7 @@
           "relation": "Mother"
         },
         {
-          "name": "Sakuni",
+          "name": "Shakuni",
           "relation": "Uncle"
         },
         {
@@ -278,7 +278,7 @@
       "view": true
     },
     {
-      "name": "Kunthi",
+      "name": "Kunti",
       "img": "./images/download.jpg",
       "relations": [],
       "view": true
@@ -296,7 +296,7 @@
       "view": true
     },
     {
-      "name": "Vichitraveerya",
+      "name": "Vichitravirya",
       "img": "./images/download.jpg",
       "relations": [],
       "view": true

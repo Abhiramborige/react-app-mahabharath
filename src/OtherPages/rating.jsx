@@ -12,7 +12,6 @@ class Rating extends Component {
     let star_array = document.querySelectorAll(".star");
 
     star_array.forEach((star, index) => {
-      
       // to have hover effects
       star.addEventListener("mouseover", () => {
         for (let i = 0; i <= index; i++) {
@@ -28,7 +27,6 @@ class Rating extends Component {
 
       // must retain the current state values when leaving the star div.
       star.addEventListener("mouseleave", () => {
-
         for (let i = 0; i < star_array.length; i++) {
           let star = star_array[i];
           if (this.state.value[i] === 1) {
@@ -65,21 +63,11 @@ class Rating extends Component {
   render() {
     return (
       <div className="star_container">
-        <span className="material-icons star" value={this.state.value[0]}>
-          star_outline
-        </span>
-        <span className="material-icons star" value={this.state.value[1]}>
-          star_outline
-        </span>
-        <span className="material-icons star" value={this.state.value[2]}>
-          star_outline
-        </span>
-        <span className="material-icons star" value={this.state.value[3]}>
-          star_outline
-        </span>
-        <span className="material-icons star" value={this.state.value[4]}>
-          star_outline
-        </span>
+        {this.state.value.map((element) => (
+          <span className="material-icons star" value={element}>
+            star_outline
+          </span>
+        ))}
       </div>
     );
   }
