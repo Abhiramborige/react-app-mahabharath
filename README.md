@@ -8,7 +8,7 @@ A React Web-app, which includes details of all characters, of one of the greates
 
 ## Contribute:
 
-#### Add character
+#### Add character [here](public\characters.json)
 
 ```json
 {
@@ -28,12 +28,21 @@ A React Web-app, which includes details of all characters, of one of the greates
 }
 ```
 
-#### Add description about the character
+#### Add description about the character [here](public\characters_details.json)
 
 ```json
 {
   "name": "Name_of_character",
   "description": "A Little bit about the character"
+}
+```
+
+#### Must append the required filter [here](public\filter.json) (A MUST)
+
+```json
+{
+  "name": "Name_of_character",
+  "rename": "Name followed by wikipedia page of character"
 }
 ```
 
