@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const { scrape_api } = require("./wiki_api");
-const { scrape_Product } = require("./scraper");
+// const { scrape_Product } = require("./scraper");
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -15,14 +15,14 @@ function encode(name) {
   return encodeURIComponent(name);
 }
 
-app.get("/:name", async (req, res) => {
+/* app.get("/:name", async (req, res) => {
   let name = encode(req.params.name);
   const result = await scrape_Product(
     `https://en.m.wikipedia.org/wiki/${name}`
   );
   res.header("Content-Type", "application/json");
   res.send(JSON.stringify(result, null, 4));
-});
+}); */
 
 app.get("/get/:name", async (req, res) => {
   let name = encode(req.params.name);

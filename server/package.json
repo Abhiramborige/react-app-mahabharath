@@ -10,11 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
   },
   "engines": {
     "node": "12.18.2",
-    "npm":"6.14.5",
+    "npm": "6.14.5",
     "vscode": "^1.22.0"
   }
 }

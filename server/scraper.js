@@ -1,6 +1,6 @@
 // not used currently, due to slow scraping
 
-const puppeteer = require("puppeteer");
+/* const puppeteer = require("puppeteer");
 
 const scrape_Product = async (url) => {
   const browser = await puppeteer.launch();
@@ -22,7 +22,7 @@ const scrape_Product = async (url) => {
 
 module.exports={
     scrape_Product
-}
+} */
 
 // mobile version of web page for better scrape.
 /* scrape_Product("https://en.m.wikipedia.org/wiki/Bhima")
