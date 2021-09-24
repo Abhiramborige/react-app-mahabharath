@@ -92,12 +92,23 @@ class Slider extends Component {
     let temp_arr = this.state.image_array;
     /* for (let i = 0; i < temp_arr.length; i++) {
       if (temp_arr[i].name === this.state.clicked) { 
-        temp_arr[i].img_link = data */
+        temp_arr[i].img_link = data 
+        {OR, a single liner instead of loop}
         temp_arr[this.state.ele_index].img_link = data;
-      /* } else {
+      } else {
         temp_arr[i].img_link = this.state.image_array[i].img_link;
       }
     } */
+
+    // if image from API is not found, then set that to default image
+    if(data===null){
+      this.props.all.forEach(element=>{
+        if(element.name===this.state.clicked){
+          data=element.img;
+        }
+      })
+    }
+    temp_arr[this.state.ele_index].img_link = data;
     this.setState({ image_array: temp_arr });
     console.log("Picture updated in slider");
   };

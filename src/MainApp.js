@@ -5,6 +5,8 @@ import Navbar from "./Components/navbar";
 import "./styles/index.css";
 import Loader from "./Components/loader";
 import { randomize_list } from "./randomizer";
+import { createAvatar } from "@dicebear/avatars";
+import * as style from "@dicebear/micah";
 
 const ClickedImage = React.lazy(() => import("./clickedImage"));
 const CharacterList = React.lazy(() => import("./characterList"));
@@ -30,9 +32,28 @@ class MainApp extends Component {
       },
     })
       .then((res) => res.json())
-      .then(({ list }) => this.setState({ list }));
-  }
 
+      /* Here, using dicebear to create different pictures to characters.
+      https://github.com/dicebear/dicebear/discussions/155 */
+      .then(({ list }) => {
+        list.forEach((element, index) => {
+          const avatar = createAvatar(style, {
+            seed: `custom-seed${index}`,
+            dataUri: true,
+            mouth: ["laughing", "smile"],
+            hair:
+              element.gender === "female"
+                ? ["mrT", "pixie", "full"]
+                : ["dougFunny", "mrClean", "dannyPhantom", "fonze", "turban"],
+            earringsProbability: element.gender === "female" ? 100 : 0,
+          });
+
+          element.img = avatar;
+        });
+
+        this.setState({ list });
+      });
+  }
 
   /* this handle function sets the state of the current list after changes made by onChange event call
     Reference: 

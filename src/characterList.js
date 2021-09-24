@@ -14,6 +14,7 @@ class CharacterList extends Component {
               rel={character.relations}
               onClick={() => this.props.onClick({ ...character })}
               key={index}
+              index={index}
             ></Character>
           ) : null
         )}

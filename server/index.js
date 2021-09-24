@@ -24,23 +24,35 @@ function encode(name) {
   res.send(JSON.stringify(result, null, 4));
 }); */
 
+//
+
 app.get("/get/:name", async (req, res) => {
   let name = encode(req.params.name);
-  const info = await scrape_api(
-    `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exsentences=10&titles=${name}&explaintext=1&formatversion=2&format=json`
+  const online_info = await scrape_api(
+    `https://en.wikipedia.org/w/api.php?action=query&formatversion=2&prop=description|pageimages|pageterms|extracts&piprop=original&titles=${name}&explaintext=1&exsectionformat=plain&exsentences=10&format=json`
   );
-  const img = await scrape_api(
-    `https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages|pageterms&piprop=original&titles=${name}`
-  );
+
   // https://stackoverflow.com/questions/32679505/node-and-express-send-json-formatted
   res.header("Content-Type", "application/json");
   res.send(
     JSON.stringify(
       {
-        name: info.query.pages[0].title,
-        info: info.query.pages[0].extract,
-        img: img.query.pages[0].original.source,
-        desc: img.query.pages[0].terms.description[0],
+        name: online_info.query.pages[0].title,
+        // https://stackoverflow.com/questions/39132802/how-to-check-key-exist-in-json-or-not?noredirect=1&lq=1
+        // https://stackoverflow.com/questions/20804163/check-if-a-key-exists-inside-a-json-object
+        info:
+          "extract" in online_info.query.pages[0]
+            ? online_info.query.pages[0].extract
+            : null,
+        img:
+          "original" in online_info.query.pages[0]
+            ? online_info.query.pages[0].original.source
+            : null,
+        desc:
+          online_info.query.pages[0].terms.description[0] +
+          ". " +
+          online_info.query.pages[0].description,
+        othernames: online_info.query.pages[0].terms.alias,
       },
       null,
       4

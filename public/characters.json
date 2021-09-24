@@ -21,11 +21,12 @@
           "relation": "Son"
         },
         {
-          "name": "Vichitravirya",
+          "name": "Vichitraveerya",
           "relation": "Son"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Satyavati",
@@ -44,11 +45,12 @@
           "relation": "Son"
         },
         {
-          "name": "Vichitravirya",
+          "name": "Vichitraveerya",
           "relation": "Son"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "female"
     },
     {
       "name": "Ganga",
@@ -67,7 +69,8 @@
           "relation": "Son"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "female"
     },
 
     {
@@ -75,7 +78,7 @@
       "img": "./images/download.jpg",
       "relations": [
         {
-          "name": "Ved Vyas",
+          "name": "VedaVyas",
           "relation": "Father"
         },
         {
@@ -91,14 +94,15 @@
           "relation": "Son"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "PanduRaj",
       "img": "./images/download.jpg",
       "relations": [
         {
-          "name": "Ved Vyas",
+          "name": "VedaVyas",
           "relation": "Father"
         },
         {
@@ -114,14 +118,15 @@
           "relation": "Son"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Vidura",
       "img": "./images/download.jpg",
       "relations": [
         {
-          "name": "Ved Vyas",
+          "name": "VedaVyas",
           "relation": "Father"
         },
         {
@@ -133,7 +138,8 @@
           "relation": "Spouse"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Yudhishthira",
@@ -156,7 +162,8 @@
           "relation": "Grand father"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Bhima",
@@ -179,7 +186,8 @@
           "relation": "Grand father"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Arjun",
@@ -202,7 +210,8 @@
           "relation": "Grand father"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Nakula",
@@ -225,7 +234,8 @@
           "relation": "Grand father"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Sahadeva",
@@ -248,7 +258,8 @@
           "relation": "Grand father"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Duryodhana",
@@ -275,37 +286,43 @@
           "relation": "Spouse"
         }
       ],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Kunti",
       "img": "./images/download.jpg",
       "relations": [],
-      "view": true
+      "view": true,
+      "gender": "female"
     },
     {
       "name": "Bheeshma",
       "img": "./images/download.jpg",
       "relations": [],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Chitrangada",
       "img": "./images/download.jpg",
       "relations": [],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
-      "name": "Vichitravirya",
+      "name": "Vichitraveerya",
       "img": "./images/download.jpg",
       "relations": [],
-      "view": true
+      "view": true,
+      "gender": "male"
     },
     {
       "name": "Draupadi",
       "img": "./images/download.jpg",
       "relations": [],
-      "view": true
+      "view": true,
+      "gender": "female"
     }
   ]
 }

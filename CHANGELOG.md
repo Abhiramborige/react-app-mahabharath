@@ -1,11 +1,28 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+### [4.0.0] (Yet to come!)
+#### Making app more dynamic:
+- Login and signup using Firebase Auth.
+- Dynamic addition of characters from seperate route to the web app.
+
+### [3.0.0] (Yet to come!)
+#### Major performance change:
+- MongoDB connectivity to still reduce the API calls from mediawiki.
+- Scrolling animations.
+- Get information of other charcaters not present as main pages, can be scraped from "List_of_characters_in_the_Mahabharata" web page.
+
+### [2.2.0]
+#### Minor changes:
+- API calls minimized, yet to minimize more.
+- Home page transformed from flexbox to grid.
+- More characters added.
+- Dynamic avataar instead of static photo on home page using Dicebear.
+
 ### [2.1.1]
 #### Final Touch:
 - API Hosted on Heroku.
 - Few more characters added.
-- Scrolling animations.
 - URL percentage encoding before fetching data.
 
 ### [2.1.0]

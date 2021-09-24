@@ -23,6 +23,18 @@
     {
       "name":"Chitrangada",
       "rename":"Chitrāngada"
+    },
+    {
+      "name":"Vichitraveerya",
+      "rename":"Vichitravirya"
+    },
+    {
+      "name":"VedaVyas",
+      "rename": "Vyasa"
+    },
+    {
+      "name":"Gandhaari",
+      "rename":"Gandhari (Mahabharata)"
     }
   ]
 }
