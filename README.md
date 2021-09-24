@@ -20,7 +20,8 @@ A React Web-app, which includes details of all characters, of one of the greates
       "relation": "Relation with main character"
     }
   ],
-  "view": true
+  "view": true,
+  "gender":"male" || "female"
 }
 ```
 #### Add description about the character [here](public/character_details.json)
