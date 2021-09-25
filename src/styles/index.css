@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -30,7 +29,7 @@ body {
     font-size: 1.4em;
     grid-auto-rows: 200px;
   }
-  
+
   /* classes that style the grid layout. */
   .container div.card-tall {
     grid-row: span 2 / auto;

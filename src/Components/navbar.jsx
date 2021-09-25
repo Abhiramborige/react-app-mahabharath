@@ -25,7 +25,7 @@ class Navbar extends Component {
             Ithihas
           </a>
         </div>
-        <button className="toggle-button">
+        <button className="toggle-button" aria-label="Navigation">
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>

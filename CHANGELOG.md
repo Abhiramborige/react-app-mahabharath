@@ -12,20 +12,25 @@ All notable changes to this project will be documented in this file.
 - Scrolling animations.
 - Get information of other charcaters not present as main pages, can be scraped from "List_of_characters_in_the_Mahabharata" web page.
 
-### [2.2.0]
+### [2.3.0] - September 25, 2021
+#### PWA:
+- Started developing a PWA out of it.
+- Started making the App SEO friendly.
+
+### [2.2.0] - September 24, 2021
 #### Minor changes:
 - API calls minimized, yet to minimize more.
 - Home page transformed from flexbox to grid.
 - More characters added.
 - Dynamic avataar instead of static photo on home page using Dicebear.
 
-### [2.1.1]
+### [2.1.1] - July 31, 2021
 #### Final Touch:
 - API Hosted on Heroku.
 - Few more characters added.
 - URL percentage encoding before fetching data.
 
-### [2.1.0]
+### [2.1.0] - July 30, 2021
 #### API commit:
 - Used Media wiki API to fetch images, information of character and others.
 - Added loading to the components waiting for the data to be fetched.
@@ -33,7 +38,7 @@ All notable changes to this project will be documented in this file.
 - More characters added.
 - UI updated.
 
-### [2.0.0]
+### [2.0.0] - July 29, 2021
 #### Scrappy commit:
 - Added scrapping module to scrape details of character from "Wikipedia".
 - Few more characters added.
