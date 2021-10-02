@@ -292,28 +292,92 @@
     {
       "name": "Kunti",
       "img": "./images/download.jpg",
-      "relations": [],
+      "relations": [
+        {
+          "name": "Pandavas",
+          "relation": "Son"
+        },
+        {
+          "name": "PanduRaj",
+          "relation": "Spouse"
+        }
+      ],
       "view": true,
       "gender": "female"
     },
     {
       "name": "Bheeshma",
       "img": "./images/download.jpg",
-      "relations": [],
+      "relations": [
+        {
+          "name": "Ganga",
+          "relation": "Mother"
+        },
+        {
+          "name": "Shantanu",
+          "relation": "Father"
+        },
+        {
+          "name": "Satyavati",
+          "relation": "Step mother"
+        },
+        {
+          "name": "Chitrangada",
+          "relation": "Half brother"
+        },
+        {
+          "name": "Vichitraveerya",
+          "relation": "Half brother"
+        }
+      ],
       "view": true,
       "gender": "male"
     },
     {
       "name": "Chitrangada",
       "img": "./images/download.jpg",
-      "relations": [],
+      "relations": [
+        {
+          "name": "Shantanu",
+          "relation": "Father"
+        },
+        {
+          "name": "Satyavati",
+          "relation": "Mother"
+        },
+        {
+          "name": "Vichitraveerya",
+          "relation": "Brother"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Half brother"
+        }
+      ],
       "view": true,
       "gender": "male"
     },
     {
       "name": "Vichitraveerya",
       "img": "./images/download.jpg",
-      "relations": [],
+      "relations": [
+        {
+          "name": "Shantanu",
+          "relation": "Father"
+        },
+        {
+          "name": "Satyavati",
+          "relation": "Mother"
+        },
+        {
+          "name": "Chitrangada",
+          "relation": "Brother"
+        },
+        {
+          "name": "Bheeshma",
+          "relation": "Half brother"
+        }
+      ],
       "view": true,
       "gender": "male"
     },
