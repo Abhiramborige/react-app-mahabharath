@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "../styles/extras.css";
+import "../styles/extras.scss";
 import handleClick from "./backend";
 import Rating from "./rating";
 
