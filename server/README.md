@@ -24,10 +24,7 @@ Environment Variables:
     Attention!!: If you define a `DB_URL`, automatically `DB_USER`, `DB_USER_PWD` and `DB_HOST` will be ignored.
 
 Deployment on Heroku: Follow the [official documentation](https://devcenter.heroku.com/articles/container-registry-and-runtime)
-  * `cd server`
-  * `heroku container:login`
-  * `heroku create` | If you already have an app set, skip this. will return: `$APP_NAME`
+  * Create a new pipeline
+  * Create a new app inside that pipeline, note de `$APP_NAME`
   * `heroku stack:set container -a $APP_NAME`
-  * `heroku container:push $REPLACE_USER-mahabharath-server -a $APP_NAME`
-  * `heroku container:release $REPLACE_USER-mahabharath-server -a $APP_NAME`
-  * `heroku open -a $APP_NAME` | Attention, the application will have errors, this happens because you don't have the ENV Variables set, this can be done in the web application, after this is done, you can restart the dyno
+  * Deploy branch
