@@ -1,3 +1,3 @@
 build:
   docker:
-    api-server: ./server/Dockerfile
+    api-server: server/Dockerfile
