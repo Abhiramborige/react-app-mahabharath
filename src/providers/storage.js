@@ -5,6 +5,7 @@ export default function () {
     setToken,
     getRefreshToken,
     getToken,
+    getUser,
   })
 
   function setUser(user) {
@@ -21,5 +22,8 @@ export default function () {
   }
   function getToken() {
     return localStorage.getItem('token')
+  }
+  function getUser() {
+    return JSON.parse(localStorage.getItem('user'))
   }
 }

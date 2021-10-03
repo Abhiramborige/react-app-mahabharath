@@ -33,13 +33,12 @@ services:
   client:
     build:
       dockerfile: Dockerfile.dev
-      context: ./client
+      context: .
     stdin_open: true
     ports:
       - 3000:3000
     volumes:
-      #- /app/node_modules
-      - ./client:/app
+      - .:/app
     environment:
       - REACT_APP_MAHABHARATH_API="http://localhost:3050"
 

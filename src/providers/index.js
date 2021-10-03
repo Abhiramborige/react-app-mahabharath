@@ -1,5 +1,4 @@
 import axios from "axios"
-import keys from "../keys"
 import jwtDecode from "jwt-decode"
 
 import buildCharacterProvider from "./character"
@@ -7,7 +6,7 @@ import buildAuthenticationProvider from "./authentication"
 import buildStorageProvider from "./storage"
 import buildJwtProvider from "./jwt"
 
-const baseURL = keys.serverApiBaseUrl
+const baseURL = "http://localhost:3050" // TODO: FIX TO USE ENV process.env.REACT_APP_MAHABHARATH_API
 
 const http = axios.create({})
 const httpAuthenticated = axios.create({})
@@ -22,6 +21,11 @@ httpAuthenticated.interceptors.request.use(
     const allowedOrigins = [baseURL];
 
     let token = storageProvider.getToken();
+    if (!token) {
+      // TODO: add error validation
+      alert("Not signed in")
+      return config
+    }
     if (jwtProvider.isExpired(token)) {
       await authenticationProvider.refreshToken()
       token = storageProvider.getToken();
@@ -37,7 +41,7 @@ httpAuthenticated.interceptors.request.use(
   }
 );
 
-const characterProvider = buildCharacterProvider({ http: httpAuthenticated, baseURL })
+const characterProvider = buildCharacterProvider({ http, baseURL })
 
 export {
   characterProvider,

@@ -9,15 +9,12 @@ export default function ({ http, baseURL, storageProvider }) {
     try {
       const url = `${baseURL}/user/create`
       const { data: { token, returnedRefreshToken, createdUser } } = await http.post(url, { email, password })
-      setToken(token)
-      setRefreshToken(returnedRefreshToken)
-      setUser(createdUser)
+      storageProvider.setToken(token)
+      storageProvider.setRefreshToken(returnedRefreshToken)
+      storageProvider.setUser(createdUser)
       return true
     } catch (error) {
-      const { status, data: { message } } = error.response
-      if (status === 400) {
-        alert(message)
-      }
+      errorHandler(error)
       return false
     }
   }
@@ -25,46 +22,36 @@ export default function ({ http, baseURL, storageProvider }) {
     try {
       const url = `${baseURL}/user/authorize`
       const { data: { token, refreshToken } } = await http.post(url, { email, password })
-      setToken(token)
-      setRefreshToken(refreshToken)
+      storageProvider.setToken(token)
+      storageProvider.setRefreshToken(refreshToken)
       return true
     } catch (error) {
-      const { status, data: { message } } = error.response
-      if (status === 400) {
-        alert(message)
-      }
+      errorHandler(error)
       return false
     }
   }
   async function refreshToken() {
     try {
       const url = `${baseURL}/user/refresh`
-      const refreshToken = getRefreshToken()
+      const refreshToken = storageProvider.getRefreshToken()
       console.log(refreshToken)
       const { data: { token, refreshToken: returnedRefreshToken } } = await http.post(url, { refreshToken })
       console.log(token, returnedRefreshToken)
-      setToken(token)
-      setRefreshToken(returnedRefreshToken)
+      storageProvider.setToken(token)
+      storageProvider.setRefreshToken(returnedRefreshToken)
       return true
     } catch (error) {
-      const { status, data: { message } } = error.response
-      if (status === 400) {
-        alert(message)
-      }
+      errorHandler(error)
       return false
     }
   }
-
-  function setUser(user) {
-    storageProvider.setItem('user', JSON.stringify(user))
-  }
-  function setRefreshToken(refreshToken) {
-    storageProvider.setItem('refreshToken', refreshToken)
-  }
-  function setToken(token) {
-    storageProvider.setItem('token', token)
-  }
-  function getRefreshToken() {
-    return storageProvider.getItem('refreshToken')
+  function errorHandler(error) {
+    let message = "Error"
+    console.error(error)
+    const status = error.response ? error.response.status : null
+    if (status === 400) {
+      message = error.response.data.message
+    }
+    alert(message)
   }
 }
