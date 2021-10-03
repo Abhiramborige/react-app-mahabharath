@@ -392,6 +392,54 @@
       ],
       "view": true,
       "gender": "female"
+    },
+    {
+      "name": "Ashwatthama",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Dronacharya",
+          "relation": "Father"
+        },
+        {
+          "name": "Kripi",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Dronacharya",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Ashwatthama",
+          "relation": "Son"
+        },
+        {
+          "name": "Kripi",
+          "relation": "Spouse"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Kripi",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Dronacharya",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Ashwatthama",
+          "relation": "Son"
+        }
+      ],
+      "view": true,
+      "gender": "male"
     }
   ]
 }

@@ -39,6 +39,18 @@
     {
       "name": "Nakula",
       "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Ashwatthama",
+      "description": "Son of guru drona."
+    },
+    {
+      "name": "Dronacharya",
+      "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Kripi",
+      "description": "Wife of guru Drona"
     }
   ]
 }
