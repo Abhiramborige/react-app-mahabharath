@@ -9,36 +9,48 @@
       "rename": "Himavat"
     },
     {
-      "name":"Arjun",
-      "rename":"Arjuna"
+      "name": "Arjun",
+      "rename": "Arjuna"
     },
     {
-      "name":"PanduRaj",
-      "rename":"Pandu"
+      "name": "PanduRaj",
+      "rename": "Pandu"
     },
     {
-      "name":"Bheeshma",
-      "rename":"Bhishma"
+      "name": "Bheeshma",
+      "rename": "Bhishma"
     },
     {
-      "name":"Chitrangada",
-      "rename":"Chitrāngada"
+      "name": "Chitrangada",
+      "rename": "Chitrāngada"
     },
     {
-      "name":"Vichitraveerya",
-      "rename":"Vichitravirya"
+      "name": "Vichitraveerya",
+      "rename": "Vichitravirya"
     },
     {
-      "name":"VedaVyas",
+      "name": "VedaVyas",
       "rename": "Vyasa"
     },
     {
-      "name":"Gandhaari",
-      "rename":"Gandhari (Mahabharata)"
+      "name": "Gandhaari",
+      "rename": "Gandhari (Mahabharata)"
     },
     {
-      "name":"Pandavas",
-      "rename":"Pandava"
+      "name": "Pandavas",
+      "rename": "Pandava"
+    },
+    {
+      "name": "Kauravas",
+      "rename": "Kaurava"
+    },
+    {
+      "name": "Ambika",
+      "rename": "Ambika (Mahabharata)"
+    },
+    {
+      "name": "Bhanumati",
+      "rename": "Bhanumati (wife of Duryodhana)"
     }
   ]
 }

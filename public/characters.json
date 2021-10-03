@@ -282,7 +282,7 @@
           "relation": "Uncle"
         },
         {
-          "name": "Bhagamathi",
+          "name": "Bhanumati",
           "relation": "Spouse"
         }
       ],
@@ -384,7 +384,12 @@
     {
       "name": "Draupadi",
       "img": "./images/download.jpg",
-      "relations": [],
+      "relations": [
+        {
+          "name": "Pandavas",
+          "relation": "Spouse"
+        }
+      ],
       "view": true,
       "gender": "female"
     }
