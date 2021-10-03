@@ -284,6 +284,102 @@
         {
           "name": "Bhagamathi",
           "relation": "Spouse"
+        },
+        {
+          "name": "Duhshala",
+          "relation": "Sister"
+        },
+        {
+          "name": "Dushasana",
+          "relation": "Brother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Dushasana",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Bheeshma",
+          "relation": "Grand father"
+        },
+        {
+          "name": "Dhritarashtra",
+          "relation": "Father"
+        },
+        {
+          "name": "Gandhaari",
+          "relation": "Mother"
+        },
+        {
+          "name": "Shakuni",
+          "relation": "Uncle"
+        },
+        {
+          "name": "Duryodhana",
+          "relation": "Brother"
+        },
+        {
+          "name": "Duhshala",
+          "relation": "Sister"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Duhshala",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Dhritarashtra",
+          "relation": "Father"
+        },
+        {
+          "name": "Gandhaari",
+          "relation": "Mother"
+        },
+        {
+          "name": "Shakuni",
+          "relation": "Uncle"
+        },
+        {
+          "name": "Duryodhana",
+          "relation": "Brother"
+        },
+        {
+          "name": "Dushasana",
+          "relation": "Brother"
+        }
+      ],
+      "view": true,
+      "gender": "female"
+    },
+    {
+      "name": "Gandhari",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Kauravas",
+          "relation": "Son"
+        },
+        {
+          "name": "Dhritarashtra",
+          "relation": "Spouse"
+        }
+      ],
+      "view": true,
+      "gender": "female"
+    },
+    {
+      "name": "Shakuni",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Gandhari",
+          "relation": "Sister"
         }
       ],
       "view": true,
@@ -384,9 +480,288 @@
     {
       "name": "Draupadi",
       "img": "./images/download.jpg",
-      "relations": [],
+      "relations": [
+        {
+          "name": "Drupada",
+          "relation": "Father"
+        },
+        {
+          "name": "Dhrishtadyumna",
+          "relation": "Brother"
+        },
+        {
+          "name": "Yudhishthira",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Bhima",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Arjun",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Nakula",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Sahadeva",
+          "relation": "Spouse"
+        }
+
+      ],
       "view": true,
       "gender": "female"
+    },
+    {
+      "name": "Subhadra",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Vasudeva",
+          "relation": "Father"
+        },
+        {
+          "name": "Rohini",
+          "relation": "Mother"
+        },
+        {
+          "name": "Krishna",
+          "relation": "Brother"
+        },
+        {
+          "name": "Arjun",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Abhimanyu",
+          "relation": "Son"
+        }
+      ],
+      "view": true,
+      "gender": "female"
+    },
+    {
+      "name": "Hidimbi",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Hidimba",
+          "relation": "Brother"
+        },
+        {
+          "name": "Bhima",
+          "relation": "Spouse"
+        },
+        {
+          "name": "Ghatotkacha",
+          "relation": "Son"
+        }
+      ],
+      "view": true,
+      "gender": "female"
+    },
+    {
+      "name": "Krishna",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Vasudeva",
+          "relation": "Father"
+        },
+        {
+          "name": "Devaki",
+          "relation": "Mother"
+        },
+        {
+          "name": "Subhadra",
+          "relation": "Sister"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Dhrishtadyumna",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Drupada",
+          "relation": "Father"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Sister"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Karna",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Surya",
+          "relation": "Father"
+        },
+        {
+          "name": "Kunti",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Prativindhya",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Yudhishthira",
+          "relation": "Father"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Sutasoma",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Bhima",
+          "relation": "Father"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Ghatotakacha",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Bhima",
+          "relation": "Father"
+        },
+        {
+          "name": "Hidimbi",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Shatanika",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Nakula",
+          "relation": "Father"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Shrutasena",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Sahadeva",
+          "relation": "Father"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Shrutakarma",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Arjuna",
+          "relation": "Father"
+        },
+        {
+          "name": "Draupadi",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Abhimanyu",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Arjuna",
+          "relation": "Father"
+        },
+        {
+          "name": "Subhadra",
+          "relation": "Mother"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Drona",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Pandavas",
+          "relation": "Disciples"
+        },
+        {
+          "name": "Kauravas",
+          "relation": "Disciples"
+        },
+        {
+          "name": "Ekalavya",
+          "relation": "Disciple"
+        },
+        {
+          "name": "Ashwatthama",
+          "relation": "Son"
+        }
+      ],
+      "view": true,
+      "gender": "male"
+    },
+    {
+      "name": "Ashwatthama",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Drona",
+          "relation": "Father"
+        }
+      ],
+      "view": true,
+      "gender": "male"
     }
+
   ]
 }

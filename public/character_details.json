@@ -14,7 +14,7 @@
     },
     {
       "name": "Kunti",
-      "description": "One of the main characters in the story."
+      "description": "One of the main characters in the story. Mother of Pandavas"
     },
     {
       "name": "Pandu",
@@ -30,7 +30,11 @@
     },
     {
       "name": "Duryodhana",
-      "description": "One of the main characters in the story."
+      "description": "One of the main characters in the story. A Kaurava"
+    },
+    {
+      "name": "Dushasana",
+      "description": "Also a Kaurava"
     },
     {
       "name": "Vidura",
@@ -39,6 +43,42 @@
     {
       "name": "Nakula",
       "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Krishna",
+      "description": "One of the main characters in the story."
+    },
+    {
+      "name": "Sahadeva",
+      "description": "Youngest of the Pandava brothers"
+    },
+    {
+      "name": "Gandhari",
+      "description": "Mother of 100 kauravas and a daughter"
+    },
+    {
+      "name": "Dhritarashtra",
+      "description": "One of the main characters in the story. Father of kauravas"
+    },
+    {
+      "name": "Drona",
+      "description": "Preceptor to the Kauravas and Pandavas"
+    },
+    {
+      "name": "Subhadra",
+      "description": "One of the wives of Arjuna"
+    },
+    {
+      "name": "Abhimanyu",
+      "description": "Son of Subhadra and Arjun"
+    },
+    {
+      "name": "Hidimbi",
+      "description": "Wife of Bhima"
+    },
+    {
+      "name": "Ghatotkacha",
+      "description": "Son of Bhima and Hidimbi"
     }
   ]
 }
