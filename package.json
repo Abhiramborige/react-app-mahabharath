@@ -42,5 +42,17 @@
   },
   "devDependencies": {
     "sass": "^1.42.1"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khush021/react-app-mahabharath.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khush021/react-app-mahabharath/issues"
+  },
+  "homepage": "https://github.com/khush021/react-app-mahabharath#readme"
 }
