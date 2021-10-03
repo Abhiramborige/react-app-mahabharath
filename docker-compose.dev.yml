@@ -15,12 +15,12 @@ services:
   api:
     build:
       dockerfile: Dockerfile.dev
-      context: .
+      context: ./server
     ports:
-      - 3000:3000
+      - 3050:3050
     volumes:
       - /app/node_modules
-      - ./:/app
+      - ./server:/app
     environment:
       # Use this to connect to the Docker MongoDB container
       - DB_USER=root
@@ -28,8 +28,20 @@ services:
       - DB_HOST=mongo:27017
       # use this variable to connect to something like MongoDB Atlas
       #- DB_URL="mongodb+srv://<username>:<password>@<host>/<database>?retryWrites=true&w=majority"
-      - PORT=3000
+      - PORT=3050
       - TOKEN_KEY=secret
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    stdin_open: true
+    ports:
+      - 3000:3000
+    volumes:
+      #- /app/node_modules
+      - ./client:/app
+    environment:
+      - REACT_APP_MAHABHARATH_API="http://localhost:3050"
 
 volumes:
   mongo:

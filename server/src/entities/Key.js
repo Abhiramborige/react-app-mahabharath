@@ -15,13 +15,13 @@ module.exports = function ({ uuidHelper }) {
 
     function checkName(name) {
       if (!name) {
-        throw new Error("Key must have a valid name.")
+        throw { code: 400, message: "Key must have a valid name." }
       }
       if (typeof name !== "string") {
-        throw new Error("Key name must be a string.")
+        throw { code: 400, message: "Key name must be a string." }
       }
       if (name.length < 2) {
-        throw new Error("Key name must be at least 2 characters long.")
+        throw { code: 400, message: "Key name must be at least 2 characters long." }
       }
     }
   }
