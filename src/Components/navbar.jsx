@@ -5,12 +5,12 @@ class Navbar extends Component {
   componentDidMount() {
     const toggleButton = document.querySelector(".toggle-button");
     const navbarLinks = document.getElementsByClassName("navbar-links")[0];
-    const activate=(navbarLinks)=> {
+    const activate = (navbarLinks) => {
       /* access all classes of navbarLinks and toggle the active class.
         If active class doesnt exist, it will add it and viceaversa. */
       navbarLinks.classList.toggle("active");
     }
-    toggleButton.addEventListener("click", ()=> {activate(navbarLinks)});
+    toggleButton.addEventListener("click", () => { activate(navbarLinks) });
   }
 
   render() {
@@ -45,6 +45,12 @@ class Navbar extends Component {
             </li>
             <li>
               <a href="/connect">Connect</a>
+            </li>
+            <li>
+              <a href="/login">Log in</a>
+            </li>
+            <li>
+              <a href="/signup">Sign up</a>
             </li>
           </ul>
         </div>
