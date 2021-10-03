@@ -1,0 +1,36 @@
+version: "3.1"
+
+services:
+  mongo:
+    image: "mongo"
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongo:/data/db
+      - mongo_config:/data/configdb
+  api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    ports:
+      - 3000:3000
+    volumes:
+      - /app/node_modules
+      - ./:/app
+    environment:
+      # Use this to connect to the Docker MongoDB container
+      - DB_USER=root
+      - DB_USER_PWD=password
+      - DB_HOST=mongo:27017
+      # use this variable to connect to something like MongoDB Atlas
+      #- DB_URL="mongodb+srv://<username>:<password>@<host>/<database>?retryWrites=true&w=majority"
+      - PORT=3000
+      - TOKEN_KEY=secret
+
+volumes:
+  mongo:
+  mongo_config:

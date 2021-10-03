@@ -2,7 +2,7 @@ import React, { Fragment, Component, Suspense } from "react";
 import Search from "./Components/search";
 import ToggleButton from "./Components/themeChanger";
 import Navbar from "./Components/navbar";
-import "./styles/index.css";
+import "./styles/index.scss";
 import Loader from "./Components/loader";
 import { randomize_list } from "./randomizer";
 import { createAvatar } from "@dicebear/avatars";

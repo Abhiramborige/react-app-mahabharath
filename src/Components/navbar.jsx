@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import '../styles/navbar.css';
+import '../styles/navbar.scss';
 
 class Navbar extends Component {
 	componentDidMount() {
@@ -18,11 +18,6 @@ class Navbar extends Component {
 	render() {
 		return (
 			<nav className="navbar">
-				<button className="toggle-button" aria-label="Navigation">
-					<span className="bar"></span>
-					<span className="bar"></span>
-					<span className="bar"></span>
-				</button>
 				<div className="brand-title">
 					<a
 						href="https://borigeabhiram.gitlab.io/second-website/"
@@ -32,6 +27,11 @@ class Navbar extends Component {
 						Ithihas
 					</a>
 				</div>
+				<button className="toggle-button" aria-label="Navigation">
+					<span className="bar"></span>
+					<span className="bar"></span>
+					<span className="bar"></span>
+				</button>
 				<div className="navbar-links">
 					<ul>
 						<li>
@@ -47,6 +47,12 @@ class Navbar extends Component {
 						</li>
 						<li>
 							<a href="/connect">Connect</a>
+						</li>
+						<li>
+							<a href="/login">Log in</a>
+						</li>
+						<li>
+							<a href="/signup">Sign up</a>
 						</li>
 					</ul>
 				</div>
