@@ -1,0 +1,44 @@
+{
+  "list": [
+    {
+      "name": "Ganga",
+      "rename": "Ganga (goddess)"
+    },
+    {
+      "name": "Himavan",
+      "rename": "Himavat"
+    },
+    {
+      "name":"Arjun",
+      "rename":"Arjuna"
+    },
+    {
+      "name":"PanduRaj",
+      "rename":"Pandu"
+    },
+    {
+      "name":"Bheeshma",
+      "rename":"Bhishma"
+    },
+    {
+      "name":"Chitrangada",
+      "rename":"Chitrāngada"
+    },
+    {
+      "name":"Vichitraveerya",
+      "rename":"Vichitravirya"
+    },
+    {
+      "name":"VedaVyas",
+      "rename": "Vyasa"
+    },
+    {
+      "name":"Gandhaari",
+      "rename":"Gandhari (Mahabharata)"
+    },
+    {
+      "name":"Pandavas",
+      "rename":"Pandava"
+    }
+  ]
+}
