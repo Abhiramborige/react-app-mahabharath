@@ -1,4 +1,4 @@
-import "../styles/extras.css";
+import "../styles/extras.scss";
 
 const About = () => {
   return (
