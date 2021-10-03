@@ -1,115 +1,130 @@
 /* All credits for the Navbar goes to "DevEd" youtube channel */
 ul {
-  li {
-    a {
-      &.skip {
-        position: absolute;
-        left: -10000px;
-        top: auto;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
+	li {
+		a {
+			&.skip {
+				position: absolute;
+				left: -10000px;
+				top: auto;
+				width: 1px;
+				height: 1px;
+				overflow: hidden;
 
-        &:focus {
-          position: static;
-          width: auto;
-          height: auto;
-        }
-      }
-    }
-  }
+				&:focus {
+					position: static;
+					width: auto;
+					height: auto;
+				}
+			}
+		}
+	}
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	color: white;
 
-  @media (max-width: 600px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
+	@media (max-width: 600px) {
+		.navbar {
+			display: inline;
+		}
+	}
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
+	a {
+		text-decoration: none;
+		color: white;
+	}
 }
 
 .brand-title {
-  font-size: 1.5rem;
-  margin: 0.5rem;
+	font-size: 1.5rem;
+	margin: 0.5rem;
+	@media (max-width: 600px) {
+		display: none;
+	}
 }
 
 .navbar-links {
-  @media (max-width: 600px) {
-    display: none;
-    width: 100%;
-  }
+	@media (max-width: 600px) {
+		top: 0;
+		left: -100%;
+		width: 250px;
+		height: 100vh;
+		padding-top: 15%;
+		background-color: #333;
+		position: fixed;
+		z-index: 1;
+		transition: left 0.5s ease-in-out;
+	}
 
-  &:focus, &.active {
-    @media (max-width: 600px) {
-      display: flex;
-    }
-  }
+	&:focus,
+	&.active {
+		@media (max-width: 600px) {
+			left: 0;
+			width: 250px;
+			height: 100vh;
+			display: block;
+			transition: left 0.5s ease-in-out;
+		}
+	}
 
-  ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
 
-    @media (max-width: 600px) {
-      flex-direction: column;
-      width: 100%;
-    }
+		@media (max-width: 600px) {
+			flex-direction: column;
+			width: 100%;
+		}
 
-    li {
-      list-style: none;
+		li {
+			list-style: none;
 
-      @media (max-width: 600px) {
-        text-align: center;
-      }
+			@media (max-width: 600px) {
+				text-align: center;
+			}
 
-      &:hover {
-        background-color: #555;
-      }
+			&:hover {
+				background-color: #555;
+			}
 
-      a {
-        padding: 1rem;
-        display: block;
+			a {
+				padding: 1rem;
+				display: block;
 
-        @media (max-width: 600px) {
-          padding: 0.5rem 1rem;
-        }
-      }
-    }
-  }
+				@media (max-width: 600px) {
+					padding: 0.5rem 1rem;
+				}
+			}
+		}
+	}
 }
 
 .toggle-button {
-  position: absolute;
-  top: 1.4rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  background-color: transparent;
-  padding: 0;
-  border: none;
+	position: fixed;
+	top: 1.4rem;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 20px;
+	background-color: transparent;
+	padding: 0;
+	border: none;
 
-  .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-  }
-  @media (max-width: 600px) {
-    display: flex;
-  }
+	.bar {
+		height: 3px;
+		width: 100%;
+		background-color: white;
+		border-radius: 10px;
+	}
+	@media (max-width: 600px) {
+		display: flex;
+		left: 1rem;
+	}
 }
