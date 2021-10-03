@@ -23,8 +23,9 @@ Environment Variables:
 
     Attention!!: If you define a `DB_URL`, automatically `DB_USER`, `DB_USER_PWD` and `DB_HOST` will be ignored.
 
-Deployment on Heroku: Follow the [official documentation](https://devcenter.heroku.com/articles/container-registry-and-runtime)
+Deployment on Heroku:
   * Create a new pipeline
-  * Create a new app inside that pipeline, note de `$APP_NAME`
-  * `heroku stack:set container -a $APP_NAME`
+  * Create a new app inside that pipeline, save the `$APP_NAME`
+  * Set the ENV Variables on the app settings
+  * Using the CLI, change the app stack to container: `heroku stack:set container -a $APP_NAME`
   * Deploy branch
