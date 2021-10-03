@@ -79,6 +79,26 @@
     {
       "name": "Ghatotkacha",
       "description": "Son of Bhima and Hidimbi"
+    },
+    {
+      "name": "Ulupi",
+      "description": "Wife of Arjuna and princess"
+    },
+    {
+      "name": "Chitrangada",
+      "description": "wife of Arjuna"
+    },
+    {
+      "name": "Shrutakarma",
+      "description": "Son of Arjuna and Ulupi"
+    },
+    {
+      "name": "Iravan",
+      "description": "Son of Arjuna and Chitrangada"
+    },
+    {
+      "name": "Babhruvahana",
+      "description": "Son of Arjuna"
     }
   ]
 }
