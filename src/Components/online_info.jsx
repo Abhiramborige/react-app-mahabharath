@@ -55,7 +55,10 @@ class OnlineInformation extends Component {
       <Fragment>
         {/* checks if clicked name is same as name fetched from API */}
         {this.props.rename !== this.state.clicked_obj.name ? (
-          <Loader></Loader>
+          <div>
+            <Loader></Loader>
+          </div>
+          
         ) : (
           <Fragment>
             <div className="flex-info-element">
