@@ -14,8 +14,7 @@ const LogComponent = (props) => {
     const password = passwordRef.current.value;
 
     if (isLogin) {
-      //await authenticationProvider.logIn(email, password);
-      await authenticationProvider.refreshToken();
+      await authenticationProvider.logIn(email, password);
     } else {
       await authenticationProvider.signUp(email, password);
     }
