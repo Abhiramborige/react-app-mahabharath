@@ -2,7 +2,6 @@ module.exports = function ({ createUser }) {
   return async function (httpRequest) {
     try {
       const { email, password } = httpRequest.body
-      console.log(email, password)
       const created = await createUser({ email, password })
       return {
         statusCode: created.code || 500,
