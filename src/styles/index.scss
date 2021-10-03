@@ -124,14 +124,6 @@ li {
   position: relative;
   top: 10vh;
   width: 90%;
-
-  &> div,
-  .flex-info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
 }
 
 .selected-image {
@@ -182,6 +174,11 @@ li {
 }
 
 .flex-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
   &> .flex-info-element {
     &:nth-child(3) {
       width: 100%;

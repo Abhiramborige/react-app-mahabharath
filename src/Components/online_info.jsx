@@ -30,7 +30,7 @@ class OnlineInformation extends Component {
 
   // https://stackoverflow.com/questions/47672661/async-function-inside-a-class
   async scrapper(name) {
-    const response = await fetch(`${process.env.REACT_APP_MAHABHARATH_API}get/${name}`); 
+    const response = await fetch(`${process.env.REACT_APP_MAHABHARATH_API}character/info?name=${name}`); 
     const result = await response.json();
     return result;
   }
