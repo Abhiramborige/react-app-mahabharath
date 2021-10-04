@@ -4,11 +4,18 @@ import '../styles/navbar.scss';
 class Navbar extends Component {
 	componentDidMount() {
 		const toggleButton = document.querySelector('.toggle-button');
+		const toggleBar = document.querySelectorAll('.bar');
 		const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 		const activate = (navbarLinks) => {
 			/* access all classes of navbarLinks and toggle the active class.
         If active class doesnt exist, it will add it and viceaversa. */
 			navbarLinks.classList.toggle('active');
+			// add classname into a bar check it is 'open' or 'close'
+			toggleBar.forEach((bar) => {
+				bar === 'open'
+					? bar.classList.toggle('close')
+					: bar.classList.toggle('open');
+			});
 		};
 		toggleButton.addEventListener('click', () => {
 			activate(navbarLinks);
