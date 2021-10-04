@@ -106,8 +106,7 @@ ul {
 
 .toggle-button {
 	position: fixed;
-	top: 1.4rem;
-	right: 1rem;
+	top: 4%;
 	display: none;
 	flex-direction: column;
 	justify-content: space-between;
@@ -119,11 +118,26 @@ ul {
 	z-index: 2;
 
 	.bar {
+		opacity: 100%;
 		height: 3px;
 		width: 100%;
 		background-color: white;
 		border-radius: 10px;
+		transition: all 0.5s ease-in-out;
 	}
+	.bar.open:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+		transition: transform 0.5s ease-in-out;
+	}
+	.bar.open:nth-child(2) {
+		opacity: 0%;
+		transition: opacity 0.5s ease-out;
+	}
+	.bar.open:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -7px);
+		transition: transform 0.5s ease-in-out;
+	}
+
 	@media (max-width: 600px) {
 		display: flex;
 		left: 1rem;
