@@ -761,7 +761,22 @@
       ],
       "view": true,
       "gender": "male"
+    },
+     {
+      "name": "Dushala",
+      "img": "./images/download.jpg",
+      "relations": [
+        {
+          "name": "Dhritarashtra",
+          "relation": "OnlyDaughter"
+        },
+        {
+          "name": "Kauravas",
+          "relation": "Only sister"
+        }
+      ]
     }
+
 
   ]
 }
