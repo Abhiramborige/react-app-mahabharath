@@ -118,7 +118,7 @@ ul {
 	z-index: 2;
 
 	.bar {
-		opacity: 100%;
+		opacity: 1;
 		height: 3px;
 		width: 100%;
 		background-color: white;
@@ -130,7 +130,7 @@ ul {
 		transition: transform 0.5s ease-in-out;
 	}
 	.bar.open:nth-child(2) {
-		opacity: 0%;
+		opacity: 0;
 		transition: opacity 0.5s ease-out;
 	}
 	.bar.open:nth-child(3) {
