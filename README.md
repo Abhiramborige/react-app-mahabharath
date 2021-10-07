@@ -1,11 +1,27 @@
-# Getting Started with Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mahabharath
+An Web application, which includes details of all characters in one of the greatest इतिहास. Web app is using React as the Frontend and Express and NodeJS for backend.
 
-# mahabharath
-A React Web-app, which includes details of all characters, of one of the greatest इतिहास
+Further, contents are loaded from Wikipedia and MediaWiki public APIs.
 
-## Contribute:
-#### Add character [here](public/characters.json)
+## Table of Contents
+
+- [Contribute](#contribute)
+- [Start Developments](#start-developments)
+- [Available Scripts](#available-scripts)
+- [Learn More](#learn-more)
+
+## Contribute
+Please follow the following guideline when conributing the project.
+
+1. Fork the repository.
+1. Clone the repository.
+1. Make the changes that you are wish to do, in a feature branch or in the `main` branch.
+1. Commit and push the changes to remote repository.
+1. Add a Pull Request to Original (Upstream) repository.
+
+Further, follwings are the ways that you can contribute to the project. Or else please read the [issues](https://github.com/Abhiramborige/react-app-mahabharath/issues) section for further contributions.
+
+#### Add characters [here](public/characters.json)
 ```json
 {
   "name": "Name_of_character",
@@ -24,7 +40,7 @@ A React Web-app, which includes details of all characters, of one of the greates
   "gender":"male" || "female"
 }
 ```
-#### Add description about the character [here](public/character_details.json)
+#### Add description about the characters [here](public/character_details.json)
 ```json
 {
   "name": "Name_of_character",
@@ -41,8 +57,9 @@ A React Web-app, which includes details of all characters, of one of the greates
 #### Add any other functionalities by creating new file.
 #### Add photos in "public\images"
 
-## To run locally:
-* clone the repository.
+## Start Developments
+
+To run project locally:
 * npm init to download the node dependencies.
 * create a '.env.local' file and edit as
 ```
@@ -52,15 +69,16 @@ Other API keys used for connecting firestore.
 * cd server
 * npm start (to start server)
 
-
 ## Available Scripts
 
 In the project directory, you can run:
+
 ### `npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
 ### `npm run build`
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
