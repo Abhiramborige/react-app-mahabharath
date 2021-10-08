@@ -12,6 +12,22 @@ body{
 .about {
   background-color: black;
   color: white;
+
+  &>h1 {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    margin-top: 25px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: #fff;
+  }
 }
 .aboutImage {
   img {
