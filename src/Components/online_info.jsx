@@ -1,5 +1,6 @@
 import { Component, Fragment } from "react";
 import Loader from "./loader";
+import { characterProvider } from "../providers";
 
 class OnlineInformation extends Component {
   constructor(props) {
@@ -20,7 +21,6 @@ class OnlineInformation extends Component {
         }));
 
         this.props.handleImage(data.img);
-
       })
       .catch((err) => {
         console.log(err);
@@ -30,8 +30,7 @@ class OnlineInformation extends Component {
 
   // https://stackoverflow.com/questions/47672661/async-function-inside-a-class
   async scrapper(name) {
-    const response = await fetch(`${process.env.REACT_APP_MAHABHARATH_API}character/info?name=${name}`); 
-    const result = await response.json();
+    const result = await characterProvider.getInfoByName(name);
     return result;
   }
 
@@ -48,9 +47,11 @@ class OnlineInformation extends Component {
   }
 
   render() {
+    /*
     if (this.state.err) {
       throw new Error("Timeout");
     }
+    */
     return (
       <Fragment>
         {/* checks if clicked name is same as name fetched from API */}
