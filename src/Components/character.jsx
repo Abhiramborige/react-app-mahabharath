@@ -35,14 +35,15 @@ class Character extends Component {
     // marquee element if name of character exceeds the width of card
     // https://pretagteam.com/question/marquee-text-when-text-overflows
     var element = document.querySelector(`#${this.props.name}`);
-    var overflowX = element.offsetWidth < element.scrollWidth;
-    if (overflowX === true) {
-      var marquee = document.createElement("marquee");
-      var contents = element.innerText;
-      marquee.innerText = contents;
-      element.innerHTML = "";
-      
-      element.appendChild(marquee);
+    if(element!==null){
+      var overflowX = element.offsetWidth < element.scrollWidth;
+      if (overflowX === true) {
+        var marquee = document.createElement("marquee");
+        var contents = element.innerText;
+        marquee.innerText = contents;
+        element.innerHTML = "";
+        element.appendChild(marquee);
+      }
     }
 
     // used to apply the stylings when first mounted using theme variable.
