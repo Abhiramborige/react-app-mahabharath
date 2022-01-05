@@ -1,4 +1,4 @@
-export default function ({ jwtDecode }) {
+export default function jwt({ jwtDecode }) {
   return Object.freeze({
     decode,
     isExpired,

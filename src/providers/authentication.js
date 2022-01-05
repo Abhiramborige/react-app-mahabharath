@@ -1,4 +1,4 @@
-export default function ({ http, baseURL, storageProvider }) {
+export default function authentication({ http, baseURL, storageProvider }) {
   return Object.freeze({
     signUp,
     logIn,

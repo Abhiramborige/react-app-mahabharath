@@ -1,4 +1,4 @@
-export default function ({ http, baseURL }) {
+export default function character({ http, baseURL }) {
   return Object.freeze({
     getInfoByName,
   })

@@ -1,4 +1,4 @@
-export default function () {
+export default function storage() {
   return Object.freeze({
     setUser,
     setRefreshToken,

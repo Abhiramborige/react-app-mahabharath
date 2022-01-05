@@ -18,7 +18,7 @@ const About = () => {
         <img src="./aboutImages/css.png" alt="Waiting" title="CSS3" />
         <img src="./aboutImages/javascript.png" alt="Waiting" title="JavaScript" />
         <h2>Contribute here</h2>
-        <p>Before contributing read the Contribution guideline <a href="https://github.com/NimperX/react-app-mahabharath/blob/main/README.md#contribute" target="_blank">here</a></p>
+        <p>Before contributing read the Contribution guideline <a href="https://github.com/NimperX/react-app-mahabharath/blob/main/README.md#contribute" target="_blank" rel="noreferrer">here</a></p>
         <a href="https://github.com/Abhiramborige/react-app-mahabharath">
           <img src="./aboutImages/github.png" alt="Waiting" title="GitHub" />
         </a>
