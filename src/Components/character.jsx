@@ -32,12 +32,23 @@ class Character extends Component {
   componentDidMount() {
     console.log("Character component Mounted");
 
+    // marquee element if name of character exceeds the width of card
+    // https://pretagteam.com/question/marquee-text-when-text-overflows
+    var element = document.querySelector(`#${this.props.name}`);
+    var overflowX = element.offsetWidth < element.scrollWidth;
+    if (overflowX === true) {
+      var marquee = document.createElement("marquee");
+      var contents = element.innerText;
+      marquee.innerText = contents;
+      element.innerHTML = "";
+      
+      element.appendChild(marquee);
+    }
+
     // used to apply the stylings when first mounted using theme variable.
     let images = document.querySelectorAll("img");
     for (let i = 0; i < images.length; i++) {
-      images[i].style.border = theme
-        ? "2px solid white"
-        : "2px solid black";
+      images[i].style.border = theme ? "2px solid white" : "2px solid black";
     }
 
     return this.props.handle ? this.handleHover.call() : null;
@@ -77,7 +88,6 @@ class Character extends Component {
             /* onMouseOver, onMouseLeave functions get theor values as the function 
               if the handle props is false, else they become null */
             onClick={this.props.onClick}
-            
             /* onMouseOver={this.props.handle ? null : this.handleHover}
             onMouseLeave={this.props.handle ? null : this.handleLeave} */
 

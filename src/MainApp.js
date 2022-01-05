@@ -1,6 +1,7 @@
 import React, { Fragment, Component, Suspense } from "react";
 import Search from "./Components/search";
 import ToggleButton from "./Components/themeChanger";
+import ResetButton from "./Components/resetSearch";
 import Navbar from "./Components/navbar";
 import "./styles/index.scss";
 import Loader from "./Components/loader";
@@ -87,6 +88,10 @@ class MainApp extends Component {
               <Fragment>
                 <Navbar></Navbar>
                 <h1>Mahabharath</h1>
+                <ResetButton
+                  list={this.state.list}
+                  onChange={this.handleChangeInState}
+                ></ResetButton>
                 <Search
                   list={this.state.list}
                   onChange={this.handleChangeInState}

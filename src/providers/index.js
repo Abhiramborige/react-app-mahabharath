@@ -6,7 +6,7 @@ import buildAuthenticationProvider from "./authentication"
 import buildStorageProvider from "./storage"
 import buildJwtProvider from "./jwt"
 
-const baseURL = "http://localhost:3050" // TODO: FIX TO USE ENV process.env.REACT_APP_MAHABHARATH_API
+const baseURL = process.env.REACT_APP_MAHABHARATH_API;
 
 const http = axios.create({})
 const httpAuthenticated = axios.create({})

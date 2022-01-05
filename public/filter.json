@@ -45,6 +45,10 @@
       "rename":"Upapandavas"
     },
     {
+      "name":"Kauravas",
+      "rename":"Kaurava"
+    },
+    {
       "name":"Sutasoma",
       "rename":"Upapandavas"
     },
@@ -53,12 +57,40 @@
       "rename":"Upapandavas"
     },
     {
+      "name":"Krishna",
+      "rename":"Krishna in the Mahabharata"
+    },
+    {
       "name":"Shrutasena",
       "rename":"Upapandavas"
     },
     {
       "name":"Shrutakarma",
       "rename":"Upapandavas"
+    },
+    {
+      "name":"Rohini Devi",
+      "rename":"Rohini (wife of Vasudeva)"
+    },
+    {
+      "name":"Ghatothkacha",
+      "rename":"Ghatotkacha"
+    },
+    {
+      "name":"Bhagamathi",
+      "rename":"Bhanumati (Mahabharata)"
+    },
+    {
+      "name":"Duhshala",
+      "rename":"Duhsala"
+    },
+    {
+      "name":"Balaram",
+      "rename":"Balarama"
+    },
+    {
+      "name":"Yogamya",
+      "rename":"Vindhyavasini"
     }
   ]
 }

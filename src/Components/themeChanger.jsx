@@ -31,6 +31,20 @@ class ToggleButton extends Component {
 			icon_element.style.color = theme ? 'white' : 'black';
 		});
 
+		// loader color
+		let loader=document.querySelectorAll(".loader");
+		if(loader!==null){
+			loader.forEach((load)=>{
+				load.style.border = theme ? "10px solid white" : "10px solid pink";
+				load.style.borderTop = theme ? "10px solid orange" : "10px solid blue";
+			})
+		}
+
+		// slider border
+		let border=document.querySelector(".slider");
+		if(border!==null)
+			border.style.border = theme ? "2px solid orange" : "2px solid blue";
+
 		// hamburger color
 		let hamburger = document.querySelectorAll('.bar');
 		hamburger.forEach((hamburger_element) => {

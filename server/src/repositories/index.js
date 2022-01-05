@@ -1,3 +1,4 @@
+require("dotenv").config()
 const mongoose = require("mongoose")
 
 const Key = require("../schemas/KeySchema")
@@ -11,7 +12,6 @@ const pass = process.env.DB_USER_PWD
 const host = process.env.DB_HOST
 const connectionUrl = process.env.DB_URL
 
-console.log(user, pass, host, connectionUrl)
 const url = connectionUrl ? connectionUrl : `mongodb://${host}`
 
 async function connectDb() {

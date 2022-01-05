@@ -2,6 +2,7 @@ import Character from "./Components/character";
 import { Component, Fragment } from "react";
 import Information from "./Information";
 import { randomize_list } from "./randomizer";
+import { theme } from "./Components/themeChanger";
 
 class Slider extends Component {
   constructor(props) {
@@ -117,7 +118,7 @@ class Slider extends Component {
     console.log("Slider rendered");
     return (
       <Fragment>
-        <div className="slider">
+        <div className="slider" style={ theme ? {border:"2px solid orange"} : {border:"2px solid blue"}}>
           <ul className="slider_list">
             {this.props.rel.map((element, index) => (
               <Fragment key={index}>

@@ -523,7 +523,7 @@
           "relation": "Father"
         },
         {
-          "name": "Rohini",
+          "name": "Rohini Devi",
           "relation": "Mother"
         },
         {
@@ -555,7 +555,7 @@
           "relation": "Spouse"
         },
         {
-          "name": "Ghatotkacha",
+          "name": "Ghatothkacha",
           "relation": "Son"
         }
       ],
@@ -577,6 +577,26 @@
         {
           "name": "Subhadra",
           "relation": "Sister"
+        },
+        {
+          "name":"Rohini Devi",
+          "relation":"Step mother"
+        },
+        {
+          "name":"Balaram",
+          "relation":"Brother"
+        },
+        {
+          "name":"Yashoda",
+          "relation":"Foster Mother"
+        },
+        {
+          "name":"Nanda",
+          "relation":"Foster Father"
+        },
+        {
+          "name":"Yogamya",
+          "relation":"Sister"
         }
       ],
       "view": true,
@@ -647,7 +667,7 @@
       "gender": "male"
     },
     {
-      "name": "Ghatotakacha",
+      "name": "Ghatothkacha",
       "img": "./images/download.jpg",
       "relations": [
         {

@@ -20,10 +20,12 @@ module.exports = function ({ http }) {
       url: baseUrl,
       params: {
         ...defaultParams,
-        titles: encode(title)
+        titles: (title)
       }
     })
+
     const [firstPage] = data.query.pages
+    console.log(firstPage);
     const { terms } = firstPage
 
     const parsedData = {
@@ -34,9 +36,5 @@ module.exports = function ({ http }) {
       othernames: terms && terms.alias ? terms.alias : null,
     }
     return parsedData
-  }
-
-  function encode(name) {
-    return encodeURIComponent(name);
   }
 }

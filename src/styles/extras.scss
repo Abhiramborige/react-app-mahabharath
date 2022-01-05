@@ -1,30 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
-body{
+body {
   background-color: black;
   text-align: center;
 }
 
 * {
   font-family: "Abel", sans-serif;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
 }
 
 .about {
   background-color: black;
   color: white;
-
-  &>h1 {
+  & > h1 {
     margin-bottom: 30px;
   }
-
   h2 {
     margin-top: 25px;
   }
-  
   p {
     font-size: 1.2rem;
   }
-
   a {
     color: #fff;
   }
@@ -43,21 +41,19 @@ body{
   padding-bottom: 10vh;
   margin: 0 auto;
   width: 50%;
-
-    p {
-      text-align: initial;
-      width: fit-content;
-      padding: 0;
-      margin: 0 auto;
-    }
-
+  p {
+    text-align: initial;
+    width: fit-content;
+    padding: 0;
+    margin: 0 auto;
+  }
   @media only screen and (max-width: 600px) {
-      width:100%;
+    width: 100%;
   }
 }
 
 .form-text {
-  h2{
+  h2 {
     font-size: 25pt;
     font-weight: 500;
   }
@@ -71,21 +67,18 @@ body{
   width: 80%;
   margin-bottom: 1rem;
   padding: 0.8em;
-  color:white;
+  color: white;
   font-size: 1em;
-
-  &::placeholder{
-    color:white;
+  &::placeholder {
+    color: white;
   }
-
-  &:focus{
+  &:focus {
     background-color: white;
-    color:black;
-    outline:none;
+    color: black;
+    outline: none;
   }
-
   @media only screen and (max-width: 600px) {
-      font-size: 0.8em;
+    font-size: 0.8em;
   }
 }
 
@@ -96,24 +89,22 @@ body{
   padding: 0.5rem 2rem;
   font-size: 1.4rem;
   font-weight: 200;
-
   &:focus {
     border: none;
     background-color: #54dcf2;
     outline: none;
   }
-
   &:hover {
     border: none;
     background-color: #54dcf2;
   }
 }
 
-.star{
+.star {
   cursor: pointer;
 }
 
-.star_container{
+.star_container {
   width: fit-content;
   text-align: center;
   margin: 0 auto;
@@ -121,16 +112,14 @@ body{
 }
 
 .loader {
-  border: 10px solid white;
   border-radius: 50%;
-  border-top: 10px solid yellow;
   width: 40px;
   height: 40px;
   animation: spin 1s linear infinite;
   margin: auto 0;
 }
 
-.loader-container{
+.loader-container {
   /* to make it center: https://stackoverflow.com/questions/6256043/css-position-loading-indicator-in-the-center-of-the-screen */
   position: fixed;
   margin: auto;
@@ -143,6 +132,10 @@ body{
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
