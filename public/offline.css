@@ -1,0 +1,10 @@
+body {
+  font-family: "Abel", sans-serif;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  background-color: #d0d0d0;
+  height: 100vh;
+}

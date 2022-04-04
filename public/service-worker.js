@@ -1,7 +1,9 @@
 const cacheName = "version-1";
 const urlsToCache = [
   'index.html',
-  'offline.html'
+  'offline.html',
+  'offline.css',
+  'https://media.webdunia.com/_media/hi/img/article/2016-12/15/full/1481777202-7644.jpg'
 ];
 const self = this;
 
@@ -9,7 +11,7 @@ const self = this;
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cacheName)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache => cache.addAll(urlsToCache, { mode: 'no-cors' }))
       .catch(err => console.log(err))
   )
 })
