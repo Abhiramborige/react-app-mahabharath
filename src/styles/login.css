@@ -1,6 +1,7 @@
 .registration-pane {
   margin: 30px auto;
   width: 350px;
+  color: black;
   display: flex;
   flex-direction: column;
   border-radius: 3px;

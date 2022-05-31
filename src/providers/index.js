@@ -2,6 +2,7 @@ import axios from "axios"
 import jwtDecode from "jwt-decode"
 
 import buildCharacterProvider from "./character"
+import buildHealthProvider from "./health";
 import buildAuthenticationProvider from "./authentication"
 import buildStorageProvider from "./storage"
 import buildJwtProvider from "./jwt"
@@ -42,10 +43,11 @@ httpAuthenticated.interceptors.request.use(
 );
 
 const characterProvider = buildCharacterProvider({ http, baseURL })
-
+const healthProvider = buildHealthProvider({http, baseURL})
 export {
   characterProvider,
   authenticationProvider,
   storageProvider,
-  jwtProvider
+  jwtProvider,
+  healthProvider
 }

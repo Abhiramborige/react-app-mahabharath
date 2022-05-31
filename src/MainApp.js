@@ -35,18 +35,23 @@ class MainApp extends Component {
       .then((res) => res.json())
 
       /* Here, using dicebear to create different pictures to characters.
-      https://github.com/dicebear/dicebear/discussions/155 */
+      https://github.com/dicebear/dicebear/discussions/155 
+      https://avatars.dicebear.com/styles/micah */
       .then(({ list }) => {
         list.forEach((element, index) => {
           const avatar = createAvatar(style, {
             seed: `custom-seed${index}`,
             dataUri: true,
+            glassesProbability: 0,
             mouth: ["laughing", "smile"],
             hair:
               element.gender === "female"
-                ? ["mrT", "pixie", "full"]
-                : ["dougFunny", "mrClean", "dannyPhantom", "fonze", "turban"],
+                ? ["mrT", "pixie", "full", "dannyPhantom"]
+                : ["mrClean", "fonze", "turban"],
             earringsProbability: element.gender === "female" ? 100 : 0,
+            facialHairProbability : element.gender === "female" ? 0 : 50,
+            facialHairColor: ["topaz", "white", "calm"],
+            
           });
 
           element.img = avatar;

@@ -12,12 +12,18 @@ All notable changes to this project will be documented in this file.
 - Scrolling animations.
 - Get information of other charcaters not present as main pages, can be scraped from "List_of_characters_in_the_Mahabharata" web page.
 
+### [2.3.2] - May 31, 2022
+#### Minor modifications
+- Error boundary fix reverted.
+- Heroku API awakening at the home page.
+- Fix dicebear images
+
 ### [2.3.1] - January 04, 2022
 #### Minor changes and fixes
-- Started working after receiving contributions
-- Removed encoding URI component as not needed anymore
-- Fixed styling changes
-- Add reset search results
+- Started working after receiving contributions.
+- Removed encoding URI component as not needed anymore.
+- Fixed styling changes.
+- Add reset search results.
 
 ### [2.3.0] - September 25, 2021
 #### PWA:

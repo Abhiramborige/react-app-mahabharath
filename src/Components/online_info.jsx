@@ -47,11 +47,11 @@ class OnlineInformation extends Component {
   }
 
   render() {
-    /*
+    
     if (this.state.err) {
       throw new Error("Timeout");
     }
-    */
+   
     return (
       <Fragment>
         {/* checks if clicked name is same as name fetched from API */}

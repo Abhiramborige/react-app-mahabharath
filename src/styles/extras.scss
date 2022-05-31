@@ -10,7 +10,6 @@ body {
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
 }
-
 .about {
   background-color: black;
   color: white;
@@ -37,8 +36,10 @@ body {
 
 .contact-form {
   color: white;
+  background-color: black;
   padding-top: 10vh;
   padding-bottom: 10vh;
+  margin-top: 20px;
   margin: 0 auto;
   width: 50%;
   p {

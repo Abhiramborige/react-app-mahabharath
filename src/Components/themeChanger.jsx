@@ -1,72 +1,72 @@
-import { Component } from 'react';
+import { Component } from "react";
 
 export let theme;
 class ToggleButton extends Component {
-	state = {
-		theme: true,
-	};
+  state = {
+    theme: true,
+  };
 
-	componentDidMount() {
-		console.log('Themechanger component mounted');
-	}
+  componentDidMount() {
+    console.log("Themechanger component mounted");
+  }
 
-	componentDidUpdate() {
-		console.log('Themechanger component updated');
+  componentDidUpdate() {
+    console.log("Themechanger component updated");
 
-		theme = this.state.theme;
-		document.querySelector('body').style.backgroundColor = theme
-			? 'black'
-			: 'white';
-		document.querySelector('*').style.color = theme ? 'white' : 'black';
-		document.querySelector('*').style.fontWeight = theme ? 'normal' : 'bolder';
+    theme = this.state.theme;
+    document.querySelector("body").style.backgroundColor = theme
+      ? "black"
+      : "white";
+    document.querySelector("*").style.color = theme ? "white" : "black";
+    document.querySelector("*").style.fontWeight = theme ? "normal" : "bolder";
 
-		let images = document.querySelectorAll('img');
-		for (let i = 0; i < images.length; i++) {
-			images[i].style.border = theme ? '2px solid white' : '2px solid black';
-		}
+    let images = document.querySelectorAll("img");
+    for (let i = 0; i < images.length; i++) {
+      images[i].style.border = theme ? "2px solid white" : "2px solid black";
+    }
 
-		// icons color
-		let icon = document.querySelectorAll('.material-icons');
-		icon.forEach((icon_element) => {
-			icon_element.style.color = theme ? 'white' : 'black';
-		});
+    // icons color
+    let icon = document.querySelectorAll(".material-icons");
+    icon.forEach((icon_element) => {
+      icon_element.style.color = theme ? "white" : "black";
+    });
 
-		// loader color
-		let loader=document.querySelectorAll(".loader");
-		if(loader!==null){
-			loader.forEach((load)=>{
-				load.style.border = theme ? "10px solid white" : "10px solid pink";
-				load.style.borderTop = theme ? "10px solid orange" : "10px solid blue";
-			})
-		}
+    // loader color
+    let loader = document.querySelectorAll(".loader");
+    if (loader !== null) {
+      loader.forEach((load) => {
+        load.style.border = theme ? "10px solid white" : "10px solid pink";
+        load.style.borderTop = theme ? "10px solid orange" : "10px solid blue";
+      });
+    }
 
-		// slider border
-		let border=document.querySelector(".slider");
-		if(border!==null)
-			border.style.border = theme ? "2px solid orange" : "2px solid blue";
+    // slider border
+    let border = document.querySelector(".slider");
+    if (border !== null)
+      border.style.border = theme ? "2px solid orange" : "2px solid blue";
 
-		// hamburger color
-		let hamburger = document.querySelectorAll('.bar');
-		hamburger.forEach((hamburger_element) => {
-			hamburger_element.style.backgroundColor = theme ? 'white' : 'black';
-		});
-	}
+    // hamburger color
+    let hamburger = document.querySelectorAll(".bar");
+    hamburger.forEach((hamburger_element) => {
+      hamburger_element.style.backgroundColor = theme ? "white" : "black";
+    });
+  }
 
-	handleThemeChange = () => {
-		this.setState((state) => ({
-			theme: !this.state.theme,
-		}));
-	};
+  handleThemeChange = () => {
+    this.setState((state) => ({
+      theme: !this.state.theme,
+    }));
+  };
 
-	render() {
-		return (
-			<button onClick={this.handleThemeChange} className="theme-toggle">
-				<span className="material-icons">
-					{this.state.theme ? 'dark_mode' : 'light_mode'}
-				</span>
-			</button>
-		);
-	}
+  render() {
+    return (
+      <button onClick={this.handleThemeChange} className="theme-toggle">
+        <span className="material-icons">
+          {this.state.theme ? "dark_mode" : "light_mode"}
+        </span>
+      </button>
+    );
+  }
 }
 
 export default ToggleButton;
