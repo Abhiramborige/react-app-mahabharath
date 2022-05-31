@@ -13,19 +13,22 @@ const About = lazy(() => import("./OtherPages/About"));
 const Interact = lazy(() => import("./OtherPages/Connect"));
 
 const App = () => {
-  useEffect(async () => {
+  useEffect( () => {
     // for health check.
     // https://www.codegrepper.com/code-examples/javascript/how+to+check+is+axios+error
-    try {
-      const result = await healthProvider.getHealthStatus();
-      console.log(result);
-    } catch (err) {
-      if (err.response) {
-        console.log(err.response.status);
-        console.log(err.response.data);
+    async function healthcheck(){
+      try {
+        const result = await healthProvider.getHealthStatus();
+        console.log(result);
+      } catch (err) {
+        if (err.response) {
+          console.log(err.response.status);
+          console.log(err.response.data);
+        }
+        alert("API under construction 🛠, please try again.");
       }
-      alert("API under construction 🛠, please try again.");
     }
+    healthcheck();
   }, []);
   return (
     <Fragment>
